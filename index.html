@@ -1,29 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Complaint Management System — Build Docs</title>
+<title>AI Complaint Management System — Build Documentation | Magician Solutions Pvt. Ltd</title>
 
-<meta name="description" content="Two Team Members Guide — Fatima and Urmah. A 7-day build walkthrough of the AI Complaint Management System: Flask, SQLite, scikit-learn, and full frontend-to-backend documentation.">
+<meta name="description" content="Official build documentation by Magician Solutions Pvt. Ltd — 7-Day delivery plan with complete reference solutions for the AI Complaint Management System: Flask, SQLite, scikit-learn, full frontend-to-backend code.">
 
-<!-- Open Graph / WhatsApp, Facebook, LinkedIn preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Complaint Management System — Build Docs">
-<meta property="og:description" content="Two Team Members Guide — Fatima and Urmah. A 7-day build walkthrough covering architecture, Flask backend, ML pipeline, and frontend implementation.">
+<meta property="og:description" content="Two Team Members Guide. 7-day build walkthrough with complete reference solutions for every task: Flask, SQLite, scikit-learn.">
 <meta property="og:image" content="og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="CMS // Build Docs">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Complaint Management System — Build Docs">
-<meta name="twitter:description" content="Two Team Members Guide — Fatima and Urmah. 7-day build walkthrough: Flask, SQLite, scikit-learn.">
+<meta name="twitter:description" content="7-day build walkthrough with complete PM reference solutions: Flask, SQLite, scikit-learn.">
 <meta name="twitter:image" content="og-image.png">
 
-<!-- Icons -->
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -44,7 +40,7 @@
     --blue:#5b8dfe;
     --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
     --sans: -apple-system, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-    --sidebar-w: 272px;
+    --sidebar-w: 280px;
     --topbar-h: 56px;
   }
 
@@ -66,7 +62,6 @@
   a{color:inherit;}
   code, pre{font-family:var(--mono);}
 
-  /* ---------------- Top bar (mobile) ---------------- */
   .topbar{
     display:none;
     position:sticky; top:0; z-index:40;
@@ -84,7 +79,6 @@
     width:36px; height:36px; border-radius:8px; font-size:16px; cursor:pointer;
   }
 
-  /* ---------------- Sidebar ---------------- */
   .sidebar{
     position:fixed; top:0; left:0; bottom:0;
     width:var(--sidebar-w);
@@ -116,14 +110,13 @@
     padding:8px 22px; font-size:13.5px; color:var(--muted);
     text-decoration:none; border-left:2px solid transparent;
   }
-  .nav-link .n{ font-family:var(--mono); font-size:11px; color:var(--muted-2); width:16px; }
+  .nav-link .n{ font-family:var(--mono); font-size:11px; color:var(--muted-2); width:20px; }
   .nav-link:hover{color:var(--text); background:var(--surface-2);}
   .nav-link.active{
     color:var(--text); border-left-color:var(--amber); background:var(--surface-2);
   }
   .nav-link.active .n{color:var(--amber);}
 
-  /* ---------------- Layout ---------------- */
   .layout{margin-left:var(--sidebar-w);}
   .content{max-width:880px; margin:0 auto; padding:64px 40px 120px;}
 
@@ -140,10 +133,9 @@
   p{color:var(--muted); line-height:1.7; font-size:15px;}
   .lead{font-size:16.5px; color:#c3cee6;}
 
-  /* ---------------- Hero ---------------- */
   .hero{padding-top:40px;}
   .hero h1{
-    font-size:40px; line-height:1.15; margin:0 0 16px; letter-spacing:-0.02em;
+    font-size:38px; line-height:1.15; margin:0 0 16px; letter-spacing:-0.02em;
   }
   .hero h1 .accent{color:var(--amber);}
   .hero-meta{
@@ -156,7 +148,6 @@
   }
   .pill b{color:var(--text); font-weight:600;}
 
-  /* ---------------- Pipeline diagram (signature element) ---------------- */
   .pipeline-wrap{
     border:1px solid var(--border); background:var(--surface);
     border-radius:14px; padding:28px 20px; margin:8px 0 12px; overflow-x:auto;
@@ -170,7 +161,6 @@
   .pflow-anim{animation:dash 1.4s linear infinite;}
   @keyframes dash{to{stroke-dashoffset:-20;}}
 
-  /* ---------------- Cards / grid ---------------- */
   .card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:14px; margin:20px 0;}
   .card{
     border:1px solid var(--border); background:var(--surface);
@@ -179,26 +169,36 @@
   .card .k{font-family:var(--mono); font-size:11px; color:var(--muted-2); text-transform:uppercase; letter-spacing:0.08em;}
   .card .v{font-size:14.5px; color:var(--text); margin-top:6px; line-height:1.5;}
 
-  /* ---------------- Timeline ---------------- */
   .day{
-    display:grid; grid-template-columns:64px 1fr; gap:18px;
-    border-top:1px solid var(--border); padding:20px 0;
+    display:grid; grid-template-columns:76px 1fr; gap:18px;
+    border-top:1px solid var(--border); padding:24px 0;
   }
   .day:last-child{border-bottom:1px solid var(--border);}
-  .day-num{font-family:var(--mono); color:var(--amber); font-size:13px; padding-top:2px;}
+  .day-num{font-family:var(--mono); color:var(--amber); font-size:14px; padding-top:2px;}
   .day-num .lbl{display:block; font-size:9.5px; color:var(--muted-2); margin-top:2px;}
-  .day-title{font-size:15.5px; color:var(--text); margin:0 0 10px; font-weight:600;}
+  .day-title{font-size:16.5px; color:var(--text); margin:0 0 12px; font-weight:600;}
   .split{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   @media (max-width:640px){.split{grid-template-columns:1fr;}}
-  .member-block{border:1px solid var(--border); border-radius:10px; padding:12px 14px; background:var(--surface);}
+  .member-block{border:1px solid var(--border); border-radius:10px; padding:14px 16px; background:var(--surface); margin-bottom:14px;}
   .member-block .who{
     font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.08em;
-    color:var(--blue); margin-bottom:6px;
+    color:var(--blue); margin-bottom:8px;
   }
   .member-block.b .who{color:var(--teal);}
-  .member-block ul{margin:0; padding-left:16px; color:var(--muted); font-size:13.5px; line-height:1.7;}
+  .member-block ul{margin:0; padding-left:16px; color:var(--muted); font-size:13.5px; line-height:1.8;}
 
-  /* ---------------- File tree ---------------- */
+  .solution-box{
+    border:1px solid rgba(232,163,61,0.35); background:rgba(232,163,61,0.045);
+    border-radius:12px; padding:18px 20px; margin:18px 0;
+  }
+  .solution-box .sol-head{
+    display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11.5px;
+    text-transform:uppercase; letter-spacing:0.1em; color:var(--amber); margin-bottom:12px;
+  }
+  .solution-box .sol-head::before{content:"🔒";}
+  .solution-box p{font-size:13.5px; margin:0 0 10px;}
+  .file-label{font-family:var(--mono); font-size:12px; color:var(--teal); margin:14px 0 4px; display:block;}
+
   .tree{
     background:var(--surface); border:1px solid var(--border); border-radius:12px;
     padding:20px 24px; font-family:var(--mono); font-size:13px; line-height:1.85;
@@ -208,7 +208,6 @@
   .tree .file{color:var(--text);}
   .tree .cmt{color:var(--muted-2);}
 
-  /* ---------------- Code blocks ---------------- */
   .code-block{
     position:relative; background:var(--surface); border:1px solid var(--border);
     border-radius:12px; margin:16px 0 24px; overflow:hidden;
@@ -225,14 +224,9 @@
   }
   .copy-btn:hover{color:var(--text); border-color:var(--muted-2);}
   .copy-btn.copied{color:var(--teal); border-color:var(--teal);}
-  pre{margin:0; padding:16px 18px; overflow-x:auto; font-size:12.8px; line-height:1.65;}
+  pre{margin:0; padding:16px 18px; overflow-x:auto; font-size:12.6px; line-height:1.65; max-height:520px;}
   pre code{color:#c9d4ec;}
-  .tok-kw{color:var(--amber);}
-  .tok-str{color:var(--teal);}
-  .tok-cmt{color:var(--muted-2); font-style:italic;}
-  .tok-fn{color:var(--blue);}
 
-  /* ---------------- Steps ---------------- */
   .steps{counter-reset:step; margin:20px 0;}
   .step{
     position:relative; padding:0 0 24px 40px; border-left:1px solid var(--border);
@@ -252,7 +246,6 @@
   .table-scroll{ overflow-x:auto; margin:16px 0; border-radius:8px; -webkit-overflow-scrolling:touch; }
   .table-scroll table{ margin:0; min-width:480px; }
 
-  /* ---------------- Table ---------------- */
   table{width:100%; border-collapse:collapse; margin:16px 0; font-size:13.5px;}
   th{
     text-align:left; font-family:var(--mono); font-size:10.5px; text-transform:uppercase;
@@ -275,16 +268,15 @@
   }
   .callout b{color:var(--text);}
 
+  ul.plain{margin:10px 0; padding-left:18px; color:var(--muted); font-size:14.5px; line-height:1.85;}
+  ul.plain li{margin-bottom:4px;}
+
   hr.div{border:none; border-top:1px solid var(--border); margin:40px 0;}
 
   footer{
     border-top:1px solid var(--border); padding:32px 40px; color:var(--muted-2);
     font-size:12.5px; font-family:var(--mono);
   }
-
-  /* =========================================================
-     HIGH-END LAYER — ambient bg, cursor, 3D, motion system
-     ========================================================= */
 
   html{ scroll-behavior:smooth; }
 
@@ -306,13 +298,11 @@
     .day:hover{ background:none; }
   }
 
-  /* film-grain / noise overlay for depth */
   .grain{
     position:fixed; inset:0; z-index:2; pointer-events:none; opacity:0.035; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* floating ambient gradient orbs */
   .bg-orbs{ position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
   .orb{
     position:absolute; border-radius:50%; filter:blur(90px); opacity:0.28;
@@ -325,7 +315,6 @@
   @keyframes float-b{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-70px,60px) scale(0.9);} }
   @keyframes float-c{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(40px,-50px) scale(1.08);} }
 
-  /* faint moving grid field for a "control room" feel */
   .grid-field{
     position:fixed; inset:-2px; z-index:0; pointer-events:none; opacity:0.5;
     background-image:
@@ -342,7 +331,6 @@
   .sidebar{ z-index:50; }
   .backdrop{ z-index:45; }
 
-  /* custom cursor */
   .cursor-dot, .cursor-ring{
     position:fixed; top:0; left:0; z-index:9999; pointer-events:none;
     border-radius:50%; transform:translate(-50%,-50%);
@@ -362,7 +350,6 @@
   }
   .cursor-ring.pressed{ width:28px; height:28px; }
 
-  /* page load veil */
   .page-veil{
     position:fixed; inset:0; z-index:10000; background:var(--ink);
     display:flex; align-items:center; justify-content:center;
@@ -376,18 +363,13 @@
   .page-veil.done{ opacity:0; visibility:hidden; }
   @keyframes spin{ to{ transform:rotate(360deg); } }
 
-  /* ---- scroll reveal system ---- */
   [data-reveal]{
     opacity:0; transform:translateY(26px);
     transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1);
   }
   [data-reveal].in{ opacity:1; transform:translateY(0); }
   [data-reveal="rise"]{ transform:translateY(40px) scale(0.985); }
-  [data-reveal="left"]{ transform:translateX(-32px); }
-  [data-reveal="right"]{ transform:translateX(32px); }
-  [data-reveal="left"].in, [data-reveal="right"].in{ transform:translateX(0); }
 
-  /* hero entrance */
   .hero .eyebrow{ animation:hero-in 0.7s cubic-bezier(.16,1,.3,1) both; }
   .hero h1{
     animation:hero-in 0.85s 0.08s cubic-bezier(.16,1,.3,1) both;
@@ -406,7 +388,6 @@
   }
   @keyframes shine{ to{ background-position:-220% 0; } }
 
-  /* sidebar entrance + glow rail */
   .sidebar{
     animation:side-in 0.6s cubic-bezier(.16,1,.3,1) both;
     box-shadow: inset -1px 0 0 rgba(232,163,61,0.05);
@@ -426,10 +407,8 @@
   .nav-link:hover::after{ transform:scaleY(1); }
   .nav-link.active::after{ transform:scaleY(1); box-shadow:0 0 8px 1px rgba(232,163,61,0.6); }
 
-  /* 3D tilt cards */
-  .card, .code-block, .member-block, .callout{
+  .card, .code-block, .member-block, .callout, .solution-box{
     transition:transform 0.4s cubic-bezier(.16,1,.3,1), box-shadow 0.4s ease, border-color 0.4s ease;
-    transform-style:preserve-3d;
     will-change:transform;
   }
   .card{ position:relative; }
@@ -445,15 +424,15 @@
   .card:hover .v{ color:#f3f6ff; }
 
   .code-block:hover{ box-shadow:0 20px 44px -18px rgba(0,0,0,0.6); border-color:var(--muted-2); }
-  .member-block:hover{ box-shadow:0 14px 30px -14px rgba(0,0,0,0.5); transform:translateY(-3px) rotateX(0deg); }
+  .member-block:hover{ box-shadow:0 14px 30px -14px rgba(0,0,0,0.5); transform:translateY(-3px); }
   .callout:hover{ box-shadow:-4px 14px 30px -16px rgba(232,163,61,0.25); }
+  .solution-box:hover{ box-shadow:-4px 14px 30px -16px rgba(232,163,61,0.2); }
 
   .day{ transition:background 0.35s ease; border-radius:10px; }
   .day:hover{ background:linear-gradient(90deg, rgba(232,163,61,0.045), transparent 70%); }
   .day-num{ transition:transform 0.35s cubic-bezier(.16,1,.3,1), color 0.35s ease; display:inline-block; }
   .day:hover .day-num{ transform:translateX(4px) scale(1.05); }
 
-  /* pipeline diagram — pulsing active nodes + glow */
   .pipeline-wrap{ perspective:900px; }
   .pipeline{ transition:transform 0.5s cubic-bezier(.16,1,.3,1); }
   .pipeline-wrap:hover .pipeline{ transform:rotateX(2deg) rotateY(-1.2deg) scale(1.008); }
@@ -463,7 +442,6 @@
     50%{ filter:drop-shadow(0 0 6px rgba(232,163,61,0.55)); }
   }
 
-  /* buttons / copy affordance */
   .copy-btn{ position:relative; overflow:hidden; transition:color 0.25s ease, border-color 0.25s ease, transform 0.15s ease; }
   .copy-btn:active{ transform:scale(0.94); }
   .copy-btn.copied{ box-shadow:0 0 0 1px rgba(53,201,160,0.4), 0 0 14px rgba(53,201,160,0.35); }
@@ -488,7 +466,6 @@
 
   ::selection{ background:rgba(232,163,61,0.28); color:#fff; }
 
-  /* slim glowing scrollbar */
   ::-webkit-scrollbar{ width:10px; height:10px; }
   ::-webkit-scrollbar-track{ background:transparent; }
   ::-webkit-scrollbar-thumb{
@@ -504,7 +481,6 @@
     body{ cursor:auto; }
   }
 
-  /* ---------------- Mobile ---------------- */
   @media (max-width:900px){
     .topbar{display:flex;}
     .sidebar{
@@ -541,7 +517,6 @@
     .nav-link{padding:11px 22px;}
     .nav-group-label{padding:16px 22px 6px;}
 
-    /* scrollable regions get a subtle fade hint on the trailing edge */
     .scroll-fade{
       -webkit-mask-image:linear-gradient(90deg, #000 92%, transparent 100%);
       mask-image:linear-gradient(90deg, #000 92%, transparent 100%);
@@ -553,7 +528,6 @@
     }
     .backdrop.open{display:block;}
 
-    /* lighten ambient layers so text stays crisp on small screens */
     .orb{filter:blur(60px); opacity:0.18;}
     .grid-field{opacity:0.3;}
   }
@@ -588,58 +562,55 @@
 <div class="page-veil" id="pageVeil"></div>
 
 <div class="topbar">
-  <span class="brand">Magician</span>
+  <span class="brand">Magician Solutions Pvt. Ltd</span>
   <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
 </div>
 <div class="backdrop" id="backdrop"></div>
 
 <aside class="sidebar" id="sidebar">
   <div class="side-brand">
-    <div class="tag-eyebrow" style="font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;">BUILD DOCUMENTATION</div>
+    <div class="tag-eyebrow" style="font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;">MAGICIAN SOLUTIONS PVT. LTD</div>
     <h1>AI Complaint<br>Management System</h1>
-    <p>2-developer / 7-day implementation guide</p>
+    <p>Official Build Documentation · 7-Day Delivery Plan</p>
   </div>
 
   <div class="nav-group">
     <div class="nav-group-label">Plan</div>
-    <a href="#overview" class="nav-link"><span class="n">01</span>Overview</a>
-    <a href="#timeline" class="nav-link"><span class="n">02</span>7-Day Timeline</a>
-    <a href="#architecture" class="nav-link"><span class="n">03</span>Architecture</a>
+    <a href="#overview" class="nav-link"><span class="n">•</span>Overview</a>
+    <a href="#rules" class="nav-link"><span class="n">•</span>Team &amp; GitHub Rules</a>
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-label">Frontend</div>
-    <a href="#html-docs" class="nav-link"><span class="n">04</span>HTML Templates</a>
-    <a href="#css-docs" class="nav-link"><span class="n">05</span>CSS System</a>
-    <a href="#js-docs" class="nav-link"><span class="n">06</span>JavaScript</a>
+    <div class="nav-group-label">7-Day Plan + Solutions</div>
+    <a href="#day1" class="nav-link"><span class="n">D1</span>Setup &amp; Repo</a>
+    <a href="#day2" class="nav-link"><span class="n">D2</span>Static UI</a>
+    <a href="#day3" class="nav-link"><span class="n">D3</span>Backend Core</a>
+    <a href="#day4" class="nav-link"><span class="n">D4</span>Dataset &amp; Training</a>
+    <a href="#day5" class="nav-link"><span class="n">D5</span>Integration</a>
+    <a href="#day6" class="nav-link"><span class="n">D6</span>Testing</a>
+    <a href="#day7" class="nav-link"><span class="n">D7</span>Finalization</a>
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-label">Backend</div>
-    <a href="#flask-docs" class="nav-link"><span class="n">07</span>Flask App</a>
-    <a href="#ml-docs" class="nav-link"><span class="n">08</span>ML Pipeline</a>
-  </div>
-
-  <div class="nav-group">
-    <div class="nav-group-label">Ship it</div>
-    <a href="#setup" class="nav-link"><span class="n">09</span>Setup Guide</a>
-    <a href="#testing" class="nav-link"><span class="n">10</span>Testing Checklist</a>
+    <div class="nav-group-label">Reference</div>
+    <a href="#architecture" class="nav-link"><span class="n">•</span>Architecture</a>
+    <a href="#flask-docs" class="nav-link"><span class="n">•</span>Full app.py</a>
+    <a href="#setup" class="nav-link"><span class="n">•</span>Setup Guide</a>
   </div>
 </aside>
 
 <div class="layout">
 <div class="content">
 
-  <!-- ================= OVERVIEW ================= -->
   <section id="overview" class="hero">
-    <div class="eyebrow">Project Brief</div>
-    <h1>An AI-classified complaint pipeline, <span class="accent">built and documented like a shipped product.</span></h1>
-    <p class="lead">This site is the working reference for building the AI Complaint Management System end to end:
-      a 7-day plan for a 2-person team, followed by a full code walkthrough of the HTML templates, the CSS system,
-      the JavaScript layer, the Flask backend, and the machine learning pipeline that classifies every complaint.</p>
+    <div class="eyebrow">Magician Solutions Pvt. Ltd — Project Brief</div>
+    <h1>An AI-classified complaint pipeline, <span class="accent">built and documented with every solution included.</span></h1>
+    <p class="lead">This is the official build reference for the AI Complaint Management System, prepared by
+      Magician Solutions Pvt. Ltd: a 7-day delivery plan, and for every task in that plan, the exact, working
+      reference solution — the same code the finished project actually uses.</p>
 
     <div class="hero-meta">
-      <span class="pill">Team size <b>2 developers</b></span>
+      <span class="pill">Company <b>Magician Solutions Pvt. Ltd</b></span>
       <span class="pill">Duration <b>7 days</b></span>
       <span class="pill">Stack <b>Flask · SQLite · scikit-learn</b></span>
       <span class="pill">Frontend <b>HTML · CSS · vanilla JS</b></span>
@@ -670,470 +641,1265 @@
         <text class="psub" x="590" y="80" text-anchor="middle">Ticket</text>
       </svg>
     </div>
+    <p style="font-size:12px; color:var(--muted-2);">Every submitted complaint runs through this pipeline synchronously — no external API calls, all three models loaded once at Flask startup.</p>
 
-    <p style="font-size:12px; color:var(--muted-2);">Every submitted complaint runs through this pipeline synchronously — no external API calls, all three models are loaded once at Flask startup.</p>
+    <h3>Project Purpose</h3>
+    <p>A web application where users submit complaints in plain English. The system automatically reads the
+      complaint text and predicts three things using Machine Learning: <b style="color:var(--text)">Category</b>
+      (e.g. Network, Software, Hostel), <b style="color:var(--text)">Priority</b> (High / Medium / Low), and
+      <b style="color:var(--text)">Department</b> (who should handle it). The complaint is then routed and tracked
+      until it is Resolved.</p>
+
+    <h3>Core Features</h3>
+    <ul class="plain">
+      <li>User registration and login (customer accounts)</li>
+      <li>Complaint submission form (plain text description)</li>
+      <li>Automatic AI classification of every submitted complaint (category, priority, department)</li>
+      <li>Customer dashboard showing their own complaints and status</li>
+      <li>Admin dashboard showing ALL complaints, with counts and category/department breakdown</li>
+      <li>Admin can update a complaint's status: Open → In Progress → Resolved</li>
+      <li>A default Admin account created automatically on first run</li>
+    </ul>
+
+    <h3>Tech Stack</h3>
+    <table>
+      <tr><th>Layer</th><th>Technology</th></tr>
+      <tr><td>Frontend</td><td>HTML, CSS, JavaScript — no framework, plain custom UI</td></tr>
+      <tr><td>Backend</td><td>Python + Flask (routing, sessions, authentication)</td></tr>
+      <tr><td>Database</td><td>SQLite (2 tables: <code>users</code>, <code>complaints</code>)</td></tr>
+      <tr><td>Machine Learning</td><td>scikit-learn — TF-IDF text vectorization + Logistic Regression / Random Forest</td></tr>
+      <tr><td>Other libraries</td><td>pandas (data handling), joblib (saving/loading trained models)</td></tr>
+    </table>
   </section>
 
-  <!-- ================= TIMELINE ================= -->
-  <section id="timeline">
-    <div class="eyebrow">Section 02</div>
-    <h2>7-Day Build Timeline</h2>
-    <p>Split by ownership so both members can work in parallel with minimal blocking. <b style="color:var(--blue)">Member A</b> owns backend and ML.
-      <b style="color:var(--teal)">Member B</b> owns frontend, database schema, and QA. Days where work depends on the other person's output are marked.</p>
 
-    <div class="day">
-      <div class="day-num">D1 <span class="lbl">MON</span></div>
-      <div>
-        <div class="day-title">Planning, environment setup, and dataset design</div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A — Backend/ML</div>
-            <ul>
-              <li>Set up Python venv, Flask, scikit-learn</li>
-              <li>Define complaint categories, priorities, departments</li>
-              <li>Start <code>generate_dataset.py</code> templates</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B — Frontend/DB</div>
-            <ul>
-              <li>Draft SRS scope and page list</li>
-              <li>Design SQLite schema: <code>users</code>, <code>complaints</code></li>
-              <li>Sketch wireframes: login, dashboard, admin</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="rules">
+    <div class="eyebrow">Section — Process</div>
+    <h2>Development &amp; GitHub Workflow Standards</h2>
+    <p>These standards apply for the entire delivery cycle and ensure a clean, reviewable, production-quality
+      codebase at every stage.</p>
 
-    <div class="day">
-      <div class="day-num">D2 <span class="lbl">TUE</span></div>
-      <div>
-        <div class="day-title">Dataset generation + base templates</div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>Finish dataset generator, produce ~900+ labeled rows</li>
-              <li>Validate class balance across 8 categories</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Build <code>base.html</code> layout + navbar</li>
-              <li>Build <code>login.html</code> / <code>register.html</code> (static)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ul class="plain">
+      <li>One GitHub repository for the project, with all contributors added as collaborators.</li>
+      <li>Branch protection enabled on <code>main</code> — no direct pushes (except the initial scaffold commit).</li>
+      <li>Work happens on feature branches: <code>feature/&lt;task-name&gt;</code> (e.g. <code>feature/login-ui</code>).</li>
+      <li>Every finished, working sub-task = one commit with a clear message (e.g. <code>feat: add login page form and validation</code>).</li>
+      <li>Each day's work is opened as a Pull Request into <code>main</code>.</li>
+      <li>Every PR is reviewed before merging — code must be explainable, not just functional.</li>
+      <li>Issues are tracked in GitHub Issues, one per numbered task in the plan.</li>
+      <li><i>Recommended:</i> a GitHub Project board (Kanban) with columns To Do / In Progress / In Review / Done.</li>
+    </ul>
 
-    <div class="day">
-      <div class="day-num">D3 <span class="lbl">WED</span></div>
-      <div>
-        <div class="day-title">Model training</div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>Train TF-IDF + Category / Priority / Department models</li>
-              <li>Log accuracy, save <code>.pkl</code> artifacts</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Build CSS design system (tokens, cards, tables, tags)</li>
-              <li>Style the auth pages end to end</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-num">D4 <span class="lbl">THU</span></div>
-      <div>
-        <div class="day-title">Backend routes + template wiring <span class="tag tag-amber">sync point</span></div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>Flask routes: register, login, logout, session auth</li>
-              <li>Wire ML prediction into <code>/submit-complaint</code></li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Build <code>dashboard.html</code> and <code>submit_complaint.html</code></li>
-              <li>Convert static markup to Jinja templates together with Member A</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-num">D5 <span class="lbl">FRI</span></div>
-      <div>
-        <div class="day-title">Admin panel + stats</div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>Admin routes: list all complaints, update status</li>
-              <li>Category / department aggregate counts</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Build <code>admin_dashboard.html</code> + bar-chart CSS</li>
-              <li>Responsive pass on all pages (mobile breakpoints)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-num">D6 <span class="lbl">SAT</span></div>
-      <div>
-        <div class="day-title">Integration testing + bug fixing <span class="tag tag-teal">both</span></div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>End-to-end test: register → login → submit → predict</li>
-              <li>Fix any DB / session edge cases</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Write test case sheet, log bugs found</li>
-              <li>Cross-browser + mobile check</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-num">D7 <span class="lbl">SUN</span></div>
-      <div>
-        <div class="day-title">Documentation, deployment, presentation</div>
-        <div class="split">
-          <div class="member-block">
-            <div class="who">Member A</div>
-            <ul>
-              <li>Write ML methodology + accuracy notes</li>
-              <li>Deploy to Render / Railway</li>
-            </ul>
-          </div>
-          <div class="member-block b">
-            <div class="who">Member B</div>
-            <ul>
-              <li>Finalize README, user manual, diagrams</li>
-              <li>Prepare demo script / slides</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h3>Daily Cadence</h3>
+    <ul class="plain">
+      <li><b style="color:var(--text)">Morning:</b> the day's task list is assigned from GitHub Issues.</li>
+      <li><b style="color:var(--text)">During the day:</b> commits are pushed to feature branches as each sub-task is completed.</li>
+      <li><b style="color:var(--text)">Evening:</b> a Pull Request is opened, reviewed, and merged once verified against the reference solution.</li>
+    </ul>
   </section>
 
-  <!-- ================= ARCHITECTURE ================= -->
-  <section id="architecture">
-    <div class="eyebrow">Section 03</div>
-    <h2>Architecture &amp; File Structure</h2>
-    <p>Four clean layers: dataset, ML, backend, and templates/static — each independently testable.</p>
 
-    <div class="tree">
+  <section id="day1">
+    <div class="eyebrow">Day 1 · Monday</div>
+    <h2>Understanding &amp; Project Setup</h2>
+    <p>No application code is written today beyond scaffolding — the goal is complete clarity on scope, purpose,
+      and tech stack before implementation begins.</p>
+
+    <ul class="plain">
+      <li>Document the project purpose in a one-paragraph summary.</li>
+      <li>Draft the full feature list and validate it against the specification.</li>
+      <li>Record the tech stack and the rationale for each choice (why Flask? why SQLite? why TF-IDF for text?).</li>
+      <li>Create the GitHub repository and add all collaborators.</li>
+      <li>Enable branch protection for <code>main</code> (Settings → Branches → require Pull Request before merging).</li>
+      <li>Create the folder structure below (empty folders hold a <code>.gitkeep</code> file so Git tracks them).</li>
+      <li>Write a first-draft README.md: project title, one-paragraph purpose, tech stack table, and a placeholder "Setup Instructions" section.</li>
+      <li>Commit and push the initial scaffold to <code>main</code> directly — the only exception to branch protection, since there is no application code yet.</li>
+    </ul>
+
+    <div class="callout"><b>Deliverable:</b> GitHub repository, README v1, empty folder structure pushed to main.</div>
+
+    <div class="solution-box">
+      <div class="sol-head">Reference Solution</div>
+      <p>Folder structure to create (empty folders need a placeholder file, e.g. <code>.gitkeep</code>):</p>
+      <div class="tree">
 <span class="dir">AI-Complaint-Management-System/</span>
-├── <span class="file">app.py</span>                          <span class="cmt"># Flask app: routes, auth, DB, ML calls</span>
+├── <span class="file">app.py</span>
 ├── <span class="file">requirements.txt</span>
 ├── <span class="dir">dataset/</span>
-│&nbsp;&nbsp;├── <span class="file">generate_dataset.py</span>         <span class="cmt"># synthetic labeled data generator</span>
-│&nbsp;&nbsp;└── <span class="file">complaints_dataset.csv</span>       <span class="cmt"># ~960 rows, 8 categories</span>
+│&nbsp;&nbsp;└── <span class="file">generate_dataset.py</span>
 ├── <span class="dir">machine_learning/</span>
-│&nbsp;&nbsp;├── <span class="file">train_models.py</span>            <span class="cmt"># trains + saves all 3 models</span>
-│&nbsp;&nbsp;└── <span class="dir">models/</span>                     <span class="cmt"># .pkl artifacts (git-ignored optional)</span>
-├── <span class="dir">templates/</span>                       <span class="cmt"># Jinja2 HTML</span>
-│&nbsp;&nbsp;├── <span class="file">base.html</span>
-│&nbsp;&nbsp;├── <span class="file">login.html</span> · <span class="file">register.html</span>
-│&nbsp;&nbsp;├── <span class="file">dashboard.html</span> · <span class="file">submit_complaint.html</span>
-│&nbsp;&nbsp;└── <span class="file">admin_dashboard.html</span>
-└── <span class="dir">static/</span>
-&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="dir">css/style.css</span>
-&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="dir">js/app.js</span>
+│&nbsp;&nbsp;├── <span class="file">train_models.py</span>
+│&nbsp;&nbsp;└── <span class="dir">models/</span>
+├── <span class="dir">templates/</span>
+└── <span class="dir">static/css/</span>
+      </div>
+      <span class="file-label">requirements.txt — complete file, exact copy from the project</span>
+    <div class="code-block">
+      <div class="code-head"><span>requirements.txt</span><button class="copy-btn">Copy</button></div>
+      <pre><code>Flask==3.0.3
+Werkzeug==3.0.3
+pandas==2.2.2
+scikit-learn==1.5.1
+joblib==1.4.2</code></pre>
     </div>
 
-    <div class="card-grid">
-      <div class="card"><div class="k">Frontend</div><div class="v">HTML5 + hand-written CSS (no framework dependency), vanilla JS for UI polish</div></div>
-      <div class="card"><div class="k">Backend</div><div class="v">Flask 3, session-based auth, server-rendered Jinja2 templates</div></div>
-      <div class="card"><div class="k">Database</div><div class="v">SQLite for development — drop-in swap to MySQL/PostgreSQL for production</div></div>
-      <div class="card"><div class="k">Machine Learning</div><div class="v">scikit-learn: TF-IDF + Logistic Regression / Random Forest, trained offline, loaded as <code>.pkl</code></div></div>
     </div>
   </section>
 
-  <!-- ================= HTML DOCS ================= -->
-  <section id="html-docs">
-    <div class="eyebrow">Section 04 — Frontend</div>
-    <h2>HTML Templates</h2>
-    <p>All pages extend one <code>base.html</code> layout using Jinja2 template inheritance — this is how the navbar,
-      flash messages, and footer stay consistent across every page without being copy-pasted.</p>
 
-    <h3>Template inheritance pattern</h3>
+  <section id="day2">
+    <div class="eyebrow">Day 2 · Tuesday</div>
+    <h2>UI Development — Static Pages</h2>
+    <p>All templates are built as static markup first, with no backend logic wired in yet.</p>
+
+    <ul class="plain">
+      <li>Create <code>templates/base.html</code>: the shared layout every page extends — navbar + <code>{% block content %}</code>.</li>
+      <li>Add a flash-message block in base.html ("Invalid password" / "Account created" type messages).</li>
+      <li>Build the navigation bar: show Login/Register when logged out, Dashboard/Logout when logged in (hardcode "logged out" state for now — session logic comes Day 3).</li>
+      <li>Create <code>templates/login.html</code>: Email + Password form, extending base.html.</li>
+      <li>Create <code>templates/register.html</code>: Name + Email + Password form.</li>
+      <li>Create <code>templates/dashboard.html</code>: 4 stat cards at the top — Total, Open, In Progress, Resolved (placeholder numbers for now), followed by a complaints table.</li>
+      <li>Create <code>templates/submit_complaint.html</code>: a single large <code>textarea</code> (rows="6") + Submit button.</li>
+      <li>Build <code>static/css/style.css</code>: design tokens, centered auth cards, form styling, stat cards, and a responsive layout (<code>flex-wrap</code> / media queries) for phone-width screens.</li>
+      <li>Use the HTML5 <code>required</code> attribute on every field that must not be empty — no custom JS validation.</li>
+      <li>Commit each finished page separately: <code>feat: base layout + navbar</code>, <code>feat: login page</code>, <code>feat: register page</code>, <code>feat: dashboard UI</code>, <code>feat: submit complaint page</code>.</li>
+    </ul>
+
+    <div class="solution-box">
+      <div class="sol-head">Reference Solution</div>
+      <span class="file-label">templates/base.html — complete file, exact copy from the project</span>
     <div class="code-block">
-      <div class="code-head"><span>base.html — defines the shared shell</span><button class="copy-btn">Copy</button></div>
-      <pre><code>&lt;body&gt;
-  &lt;nav class="navbar"&gt;...&lt;/nav&gt;
+      <div class="code-head"><span>templates/base.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;{% block title %}AI Complaint Management System{% endblock %}&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ url_for(&#x27;static&#x27;, filename=&#x27;css/style.css&#x27;) }}&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-  &lt;main class="container"&gt;
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        &lt;div class="flash-wrap"&gt;
-        {% for category, message in messages %}
-          &lt;div class="flash flash-{{ category }}"&gt;{{ message }}&lt;/div&gt;
-        {% endfor %}
+&lt;nav class=&quot;navbar&quot;&gt;
+    &lt;div class=&quot;nav-inner&quot;&gt;
+        &lt;a href=&quot;{{ url_for(&#x27;index&#x27;) }}&quot; class=&quot;brand&quot;&gt;
+            &lt;span class=&quot;brand-dot&quot;&gt;&lt;/span&gt; AI Complaint System
+        &lt;/a&gt;
+        &lt;div class=&quot;nav-links&quot;&gt;
+            {% if session.get(&#x27;user_id&#x27;) %}
+                {% if session.get(&#x27;role&#x27;) == &#x27;admin&#x27; %}
+                    &lt;a href=&quot;{{ url_for(&#x27;admin_dashboard&#x27;) }}&quot;&gt;Admin Panel&lt;/a&gt;
+                {% else %}
+                    &lt;a href=&quot;{{ url_for(&#x27;dashboard&#x27;) }}&quot;&gt;Dashboard&lt;/a&gt;
+                    &lt;a href=&quot;{{ url_for(&#x27;submit_complaint&#x27;) }}&quot;&gt;Submit Complaint&lt;/a&gt;
+                {% endif %}
+                &lt;span class=&quot;nav-user&quot;&gt;{{ session.get(&#x27;name&#x27;) }}&lt;/span&gt;
+                &lt;a href=&quot;{{ url_for(&#x27;logout&#x27;) }}&quot; class=&quot;btn-nav&quot;&gt;Logout&lt;/a&gt;
+            {% else %}
+                &lt;a href=&quot;{{ url_for(&#x27;login&#x27;) }}&quot;&gt;Login&lt;/a&gt;
+                &lt;a href=&quot;{{ url_for(&#x27;register&#x27;) }}&quot; class=&quot;btn-nav&quot;&gt;Register&lt;/a&gt;
+            {% endif %}
         &lt;/div&gt;
-      {% endif %}
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;main class=&quot;container&quot;&gt;
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            &lt;div class=&quot;flash-wrap&quot;&gt;
+            {% for category, message in messages %}
+                &lt;div class=&quot;flash flash-{{ category }}&quot;&gt;{{ message }}&lt;/div&gt;
+            {% endfor %}
+            &lt;/div&gt;
+        {% endif %}
     {% endwith %}
 
     {% block content %}{% endblock %}
-  &lt;/main&gt;
-&lt;/body&gt;</code></pre>
+&lt;/main&gt;
+
+&lt;footer class=&quot;footer&quot;&gt;
+    &lt;p&gt;AI Complaint Management System &amp;mdash; Final Year Project&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     </div>
 
-    <p>Every other page only defines what's different — the content block:</p>
+      <span class="file-label">templates/login.html — complete file, exact copy from the project</span>
     <div class="code-block">
-      <div class="code-head"><span>submit_complaint.html — extends base.html</span><button class="copy-btn">Copy</button></div>
-      <pre><code>{% extends "base.html" %}
-{% block title %}Submit Complaint{% endblock %}
+      <div class="code-head"><span>templates/login.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>{% extends &quot;base.html&quot; %}
+{% block title %}Login{% endblock %}
 {% block content %}
-&lt;form method="POST" action="{{ url_for('submit_complaint') }}"&gt;
-  &lt;textarea name="complaint_text" rows="6" required&gt;&lt;/textarea&gt;
-  &lt;button type="submit" class="btn-primary"&gt;Submit Complaint&lt;/button&gt;
-&lt;/form&gt;
+&lt;div class=&quot;auth-card&quot;&gt;
+    &lt;h1&gt;Welcome Back&lt;/h1&gt;
+    &lt;p class=&quot;muted&quot;&gt;Login to submit and track your complaints.&lt;/p&gt;
+
+    &lt;form method=&quot;POST&quot; action=&quot;{{ url_for(&#x27;login&#x27;) }}&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input type=&quot;email&quot; name=&quot;email&quot; required placeholder=&quot;you@example.com&quot;&gt;
+
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;password&quot; required placeholder=&quot;********&quot;&gt;
+
+        &lt;button type=&quot;submit&quot; class=&quot;btn-primary&quot;&gt;Login&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;p class=&quot;muted small&quot;&gt;No account? &lt;a href=&quot;{{ url_for(&#x27;register&#x27;) }}&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+    &lt;p class=&quot;muted small&quot;&gt;Demo admin: admin@cms.local / admin123&lt;/p&gt;
+&lt;/div&gt;
 {% endblock %}</code></pre>
     </div>
 
-    <h3>Why this matters</h3>
-    <p>Changing the navbar or flash-message style once in <code>base.html</code> updates all 6 pages instantly.
-      This is the same pattern used in production Flask/Django apps — never duplicate layout markup per page.</p>
-
-    <table>
-      <tr><th>Template</th><th>Route</th><th>Purpose</th></tr>
-      <tr><td><code>login.html</code></td><td>GET/POST <code>/login</code></td><td>Session-based sign in</td></tr>
-      <tr><td><code>register.html</code></td><td>GET/POST <code>/register</code></td><td>New account creation</td></tr>
-      <tr><td><code>dashboard.html</code></td><td>GET <code>/dashboard</code></td><td>Customer's own complaints + stats</td></tr>
-      <tr><td><code>submit_complaint.html</code></td><td>GET/POST <code>/submit-complaint</code></td><td>Complaint form → triggers ML prediction</td></tr>
-      <tr><td><code>admin_dashboard.html</code></td><td>GET <code>/admin</code></td><td>All complaints, category/department breakdown, status control</td></tr>
-    </table>
-  </section>
-
-  <!-- ================= CSS DOCS ================= -->
-  <section id="css-docs">
-    <div class="eyebrow">Section 05 — Frontend</div>
-    <h2>CSS Design System</h2>
-    <p>One stylesheet (<code>static/css/style.css</code>), driven by CSS custom properties so the whole theme can be
-      re-colored from a single block at the top of the file.</p>
-
+      <span class="file-label">templates/register.html — complete file, exact copy from the project</span>
     <div class="code-block">
-      <div class="code-head"><span>style.css — design tokens</span><button class="copy-btn">Copy</button></div>
+      <div class="code-head"><span>templates/register.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>{% extends &quot;base.html&quot; %}
+{% block title %}Register{% endblock %}
+{% block content %}
+&lt;div class=&quot;auth-card&quot;&gt;
+    &lt;h1&gt;Create Account&lt;/h1&gt;
+    &lt;p class=&quot;muted&quot;&gt;Register to start submitting complaints.&lt;/p&gt;
+
+    &lt;form method=&quot;POST&quot; action=&quot;{{ url_for(&#x27;register&#x27;) }}&quot;&gt;
+        &lt;label&gt;Full Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;name&quot; required placeholder=&quot;John Doe&quot;&gt;
+
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input type=&quot;email&quot; name=&quot;email&quot; required placeholder=&quot;you@example.com&quot;&gt;
+
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;password&quot; required placeholder=&quot;********&quot;&gt;
+
+        &lt;button type=&quot;submit&quot; class=&quot;btn-primary&quot;&gt;Register&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;p class=&quot;muted small&quot;&gt;Already have an account? &lt;a href=&quot;{{ url_for(&#x27;login&#x27;) }}&quot;&gt;Login here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+{% endblock %}</code></pre>
+    </div>
+
+      <span class="file-label">templates/dashboard.html — complete file, exact copy from the project</span>
+    <div class="code-block">
+      <div class="code-head"><span>templates/dashboard.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>{% extends &quot;base.html&quot; %}
+{% block title %}My Dashboard{% endblock %}
+{% block content %}
+&lt;div class=&quot;page-header&quot;&gt;
+    &lt;h1&gt;My Dashboard&lt;/h1&gt;
+    &lt;p class=&quot;muted&quot;&gt;Track the status of complaints you&#x27;ve submitted.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;stats-grid&quot;&gt;
+    &lt;div class=&quot;stat-card&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.total }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Total&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-open&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.open }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Open&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-progress&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.in_progress }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;In Progress&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-resolved&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.resolved }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Resolved&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+        &lt;h2&gt;My Complaints&lt;/h2&gt;
+        &lt;a href=&quot;{{ url_for(&#x27;submit_complaint&#x27;) }}&quot; class=&quot;btn-primary btn-small&quot;&gt;+ New Complaint&lt;/a&gt;
+    &lt;/div&gt;
+
+    {% if complaints %}
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Complaint&lt;/th&gt;
+                &lt;th&gt;Category&lt;/th&gt;
+                &lt;th&gt;Priority&lt;/th&gt;
+                &lt;th&gt;Department&lt;/th&gt;
+                &lt;th&gt;Status&lt;/th&gt;
+                &lt;th&gt;Date&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        {% for c in complaints %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ c.complaint_text }}&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag&quot;&gt;{{ c.category }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag tag-priority-{{ c.priority|lower }}&quot;&gt;{{ c.priority }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;{{ c.department }}&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag tag-status-{{ c.status|lower|replace(&#x27; &#x27;, &#x27;&#x27;) }}&quot;&gt;{{ c.status }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;{{ c.created_at[:10] }}&lt;/td&gt;
+            &lt;/tr&gt;
+        {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    {% else %}
+    &lt;p class=&quot;muted&quot;&gt;You haven&#x27;t submitted any complaints yet.&lt;/p&gt;
+    {% endif %}
+&lt;/div&gt;
+{% endblock %}</code></pre>
+    </div>
+
+      <span class="file-label">templates/submit_complaint.html — complete file (no custom JS — validation via HTML5 required)</span>
+    <div class="code-block">
+      <div class="code-head"><span>templates/submit_complaint.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>{% extends &quot;base.html&quot; %}
+{% block title %}Submit Complaint{% endblock %}
+{% block content %}
+&lt;div class=&quot;page-header&quot;&gt;
+    &lt;h1&gt;Submit a Complaint&lt;/h1&gt;
+    &lt;p class=&quot;muted&quot;&gt;Describe your issue below. Our AI model will automatically classify the
+       category, priority, and department for faster resolution.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+    &lt;form method=&quot;POST&quot; action=&quot;{{ url_for(&#x27;submit_complaint&#x27;) }}&quot;&gt;
+        &lt;label&gt;Complaint Description&lt;/label&gt;
+        &lt;textarea name=&quot;complaint_text&quot; rows=&quot;6&quot; required
+            placeholder=&quot;e.g. WiFi is not working in Lab 2, or Salary not received for June&quot;&gt;&lt;/textarea&gt;
+
+        &lt;button type=&quot;submit&quot; class=&quot;btn-primary&quot;&gt;Submit Complaint&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+{% endblock %}</code></pre>
+    </div>
+
+      <span class="file-label">static/css/style.css — complete file (final combined version)</span>
+    <div class="code-block">
+      <div class="code-head"><span>static/css/style.css</span><button class="copy-btn">Copy</button></div>
       <pre><code>:root {
-  --bg: #0f1115;
-  --surface: #171a21;
-  --border: #2a2f3d;
-  --text: #eef0f4;
-  --muted: #8a90a3;
-  --accent: #6c5ce7;
-  --accent-2: #00d2a0;
-  --danger: #ff5470;
-  --warning: #ffb020;
-  --radius: 10px;
+    --bg: #0f1115;
+    --surface: #171a21;
+    --surface-2: #1e2230;
+    --border: #2a2f3d;
+    --text: #eef0f4;
+    --muted: #8a90a3;
+    --accent: #6c5ce7;
+    --accent-2: #00d2a0;
+    --danger: #ff5470;
+    --warning: #ffb020;
+    --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+}
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.brand-dot {
+    width: 10px; height: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-radius: 50%;
+    display: inline-block;
+}
+.nav-links { display: flex; align-items: center; gap: 20px; font-size: 14px; }
+.nav-user { color: var(--muted); }
+.btn-nav {
+    background: var(--accent);
+    color: white !important;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+}
+
+/* ---------- Layout ---------- */
+.container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 80px; }
+.footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px; }
+
+.page-header { margin-bottom: 24px; }
+.page-header h1 { margin: 0 0 6px; font-size: 26px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+/* ---------- Flash messages ---------- */
+.flash-wrap { margin-bottom: 20px; }
+.flash {
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+    font-size: 14px;
+    border-left: 3px solid var(--accent);
+}
+.flash-success { border-color: var(--accent-2); background: rgba(0,210,160,0.08); }
+.flash-danger { border-color: var(--danger); background: rgba(255,84,112,0.08); }
+.flash-warning { border-color: var(--warning); background: rgba(255,176,32,0.08); }
+.flash-info { border-color: var(--accent); background: rgba(108,92,231,0.08); }
+
+/* ---------- Cards / auth ---------- */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px;
+}
+.card h2 { margin: 0 0 16px; font-size: 18px; }
+
+.auth-card {
+    max-width: 400px;
+    margin: 40px auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+.auth-card h1 { margin: 0 0 4px; font-size: 24px; }
+
+/* ---------- Forms ---------- */
+form label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 14px 0 6px;
+}
+input, textarea, select {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+}
+textarea { resize: vertical; }
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.btn-primary {
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--accent), #8b7cf6);
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-small { margin-top: 0; padding: 6px 12px; font-size: 13px; }
+.inline-form { display: flex; gap: 6px; align-items: center; }
+.inline-form select { width: auto; padding: 6px 8px; font-size: 13px; }
+
+/* ---------- Stats ---------- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.stat-open { border-left-color: var(--warning); }
+.stat-progress { border-left-color: var(--accent); }
+.stat-resolved { border-left-color: var(--accent-2); }
+.stat-high { border-left-color: var(--danger); }
+.stat-num { font-size: 28px; font-weight: 700; }
+.stat-label { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+/* ---------- Table ---------- */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+    text-align: left;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+}
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+/* ---------- Tags ---------- */
+.tag {
+    display: inline-block;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.tag-priority-high { background: rgba(255,84,112,0.15); border-color: var(--danger); color: #ff8fa3; }
+.tag-priority-medium { background: rgba(255,176,32,0.15); border-color: var(--warning); color: #ffcb6b; }
+.tag-priority-low { background: rgba(0,210,160,0.15); border-color: var(--accent-2); color: #6ee8c5; }
+.tag-status-open { background: rgba(255,176,32,0.15); border-color: var(--warning); color: #ffcb6b; }
+.tag-status-inprogress { background: rgba(108,92,231,0.15); border-color: var(--accent); color: #b4a9f9; }
+.tag-status-resolved { background: rgba(0,210,160,0.15); border-color: var(--accent-2); color: #6ee8c5; }
+
+/* ---------- Grid / bars ---------- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 13px; }
+.bar-label { width: 110px; color: var(--muted); flex-shrink: 0; }
+.bar-track { flex: 1; height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.bar-fill-alt { background: linear-gradient(90deg, #ffb020, #ff5470); }
+.bar-count { width: 24px; text-align: right; color: var(--muted); }
+
+@media (max-width: 700px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .nav-links { gap: 12px; font-size: 13px; }
 }</code></pre>
     </div>
 
-    <h3>Reusable component classes</h3>
-    <table>
-      <tr><th>Class</th><th>Used for</th></tr>
-      <tr><td><code>.card</code></td><td>Boxed content panels (forms, tables, stat groups)</td></tr>
-      <tr><td><code>.stat-card</code></td><td>Dashboard number tiles (Total / Open / Resolved)</td></tr>
-      <tr><td><code>.tag</code>, <code>.tag-priority-*</code></td><td>Colored pill labels for category/priority/status</td></tr>
-      <tr><td><code>.table</code></td><td>Complaint list styling, consistent across dashboards</td></tr>
-      <tr><td><code>.btn-primary</code></td><td>Gradient call-to-action button, used on every form</td></tr>
-    </table>
-
-    <h3>Status &amp; priority color coding</h3>
-    <div class="code-block">
-      <div class="code-head"><span>style.css — semantic color mapping</span><button class="copy-btn">Copy</button></div>
-      <pre><code>.tag-priority-high    { border-color: var(--danger);  color: #ff8fa3; }
-.tag-priority-medium  { border-color: var(--warning); color: #ffcb6b; }
-.tag-priority-low     { border-color: var(--accent-2); color: #6ee8c5; }</code></pre>
-    </div>
-    <p>This mapping means priority is always visually scannable — red draws the eye to what needs attention first,
-      without the admin having to read every row.</p>
-
-    <h3>Responsiveness</h3>
-    <div class="code-block">
-      <div class="code-head"><span>style.css — mobile breakpoint</span><button class="copy-btn">Copy</button></div>
-      <pre><code>@media (max-width: 700px) {
-  .grid-2 { grid-template-columns: 1fr; }
-  .nav-links { gap: 12px; font-size: 13px; }
-}</code></pre>
     </div>
   </section>
 
-  <!-- ================= JS DOCS ================= -->
-  <section id="js-docs">
-    <div class="eyebrow">Section 06 — Frontend</div>
-    <h2>JavaScript Layer</h2>
-    <p>The core app is intentionally server-rendered — forms submit natively and Flask handles redirects, so no
-      JS framework is required. <code>static/js/app.js</code> adds small progressive-enhancement touches that make
-      the UI feel polished without adding any build step.</p>
 
+  <section id="day3">
+    <div class="eyebrow">Day 3 · Wednesday</div>
+    <h2>Backend Core — Flask + Database</h2>
+    <p>Authentication and complaint storage are implemented together in a single <code>app.py</code> — Flask
+      keeps everything in one file for a project this size.</p>
+
+    <ul class="plain">
+      <li>Initialize the Flask app in <code>app.py</code> (app instance + a <code>secret_key</code> for sessions).</li>
+      <li>Write a database helper: open a SQLite connection per-request using Flask's <code>g</code> object, close it automatically at request end.</li>
+      <li>Create the <code>users</code> table: id, name, email (unique), password_hash, role (customer/admin), created_at.</li>
+      <li>Create the <code>complaints</code> table: id, user_id (foreign key), complaint_text, category, priority, department, status (default 'Open'), created_at.</li>
+      <li>On first run, if no admin exists, auto-create one default admin account.</li>
+      <li>Build <code>/register</code>: GET shows the form, POST validates fields, checks the email isn't already used, hashes the password, inserts the row.</li>
+      <li>Build <code>/login</code>: POST checks email + password hash, stores user_id/name/role in the session if correct.</li>
+      <li>Build <code>/logout</code>: clears the session.</li>
+      <li>Write two decorators: <code>login_required</code> and <code>admin_required</code>.</li>
+      <li>Build <code>/submit-complaint</code> (POST): for now, insert with category/priority/department set to 'Unclassified' — real AI predictions come Day 5.</li>
+      <li>Build <code>/dashboard</code>: fetch only the logged-in user's complaints (ORDER BY created_at DESC), compute the 4 stats in Python, and wire the real numbers into <code>dashboard.html</code>.</li>
+      <li>Confirm <code>database.db</code> is in <code>.gitignore</code> — never commit a database file with real data.</li>
+      <li>Test manually: register a user, log in, submit a complaint, log out, confirm a protected page redirects when logged out.</li>
+    </ul>
+
+    <div class="callout">Days 3 and 5 both write into the <b>same</b> <code>app.py</code> — the complete final version
+      of the file (auth, complaints CRUD, and the ML integration added on Day 5) is shown once below, since Flask
+      keeps everything in one file.</div>
+
+    <div class="solution-box">
+      <div class="sol-head">Reference Solution — complete app.py (final version, covers Day 3 + Day 5 work)</div>
+      <p>Relevant sections for Day 3: <code>init_db()</code> (creates both tables + default admin), <code>login_required</code> /
+        <code>admin_required</code>, <code>register()</code>, <code>login()</code>, <code>logout()</code>,
+        <code>submit_complaint()</code>, <code>dashboard()</code>.</p>
+      <span class="file-label">app.py — complete file, exact copy from the project</span>
     <div class="code-block">
-      <div class="code-head"><span>static/js/app.js — auto-dismiss flash messages</span><button class="copy-btn">Copy</button></div>
-      <pre><code>document.addEventListener("DOMContentLoaded", () =&gt; {
-  document.querySelectorAll(".flash").forEach((el) =&gt; {
-    setTimeout(() =&gt; {
-      el.style.transition = "opacity 0.4s ease";
-      el.style.opacity = "0";
-      setTimeout(() =&gt; el.remove(), 400);
-    }, 5000);
-  });
-});</code></pre>
-    </div>
+      <div class="code-head"><span>app.py</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&quot;&quot;&quot;
+AI Complaint Management System
+Flask application entry point.
 
-    <div class="code-block">
-      <div class="code-head"><span>static/js/app.js — live character counter on the complaint form</span><button class="copy-btn">Copy</button></div>
-      <pre><code>const textarea = document.querySelector('textarea[name="complaint_text"]');
-if (textarea) {
-  const counter = document.createElement("div");
-  counter.className = "char-counter";
-  textarea.after(counter);
+Run:
+    1. python dataset/generate_dataset.py       (already generated, optional)
+    2. python machine_learning/train_models.py  (already trained, optional)
+    3. python app.py
+    4. Open http://127.0.0.1:5000
+&quot;&quot;&quot;
 
-  const updateCount = () =&gt; {
-    counter.textContent = `${textarea.value.length} characters`;
-  };
-  textarea.addEventListener("input", updateCount);
-  updateCount();
-}</code></pre>
-    </div>
+import os
+import sqlite3
+from datetime import datetime
+from functools import wraps
 
-    <div class="callout"><b>Why so little JS?</b> Keeping business logic (auth, prediction, routing) entirely on the
-      server means there's one source of truth and no API layer to secure separately. Add a JS framework later only
-      if the admin panel needs live-updating data without page reloads.</div>
-  </section>
+import joblib
+from flask import Flask, render_template, request, redirect, url_for, session, flash, g
+from werkzeug.security import generate_password_hash, check_password_hash
 
-  <!-- ================= FLASK DOCS ================= -->
-  <section id="flask-docs">
-    <div class="eyebrow">Section 07 — Backend</div>
-    <h2>Flask Application</h2>
-    <p><code>app.py</code> is a single-file Flask app: routes, SQLite access, and the ML prediction call all live
-      together for a project this size. Below is how each core piece works.</p>
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, &quot;database.db&quot;)
+MODELS_DIR = os.path.join(BASE_DIR, &quot;machine_learning&quot;, &quot;models&quot;)
 
-    <h3>1. Session-based authentication</h3>
-    <div class="code-block">
-      <div class="code-head"><span>app.py — login route</span><button class="copy-btn">Copy</button></div>
-      <pre><code>@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        email = request.form.get("email", "").strip().lower()
-        password = request.form.get("password", "")
+app = Flask(__name__)
+app.secret_key = &quot;change-this-secret-key-in-production&quot;
 
-        db = get_db()
-        user = db.execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
 
-        if user and check_password_hash(user["password_hash"], password):
-            session["user_id"] = user["id"]
-            session["role"] = user["role"]
-            return redirect(url_for("dashboard"))
+# ------------------------------------------------------------------
+# ML models - loaded once at startup
+# ------------------------------------------------------------------
+def load_ml_models():
+    required = [
+        &quot;tfidf_vectorizer.pkl&quot;, &quot;category_model.pkl&quot;, &quot;category_encoder.pkl&quot;,
+        &quot;priority_model.pkl&quot;, &quot;priority_encoder.pkl&quot;,
+        &quot;department_model.pkl&quot;, &quot;department_encoder.pkl&quot;,
+    ]
+    missing = [f for f in required if not os.path.exists(os.path.join(MODELS_DIR, f))]
+    if missing:
+        print(&quot;WARNING: ML models not found:&quot;, missing)
+        print(&quot;Run: python machine_learning/train_models.py&quot;)
+        return None
 
-        flash("Invalid email or password.", "danger")
-        return redirect(url_for("login"))
+    return {
+        &quot;vectorizer&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;tfidf_vectorizer.pkl&quot;)),
+        &quot;category_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;category_model.pkl&quot;)),
+        &quot;category_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;category_encoder.pkl&quot;)),
+        &quot;priority_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;priority_model.pkl&quot;)),
+        &quot;priority_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;priority_encoder.pkl&quot;)),
+        &quot;department_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;department_model.pkl&quot;)),
+        &quot;department_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;department_encoder.pkl&quot;)),
+    }
 
-    return render_template("login.html")</code></pre>
-    </div>
-    <p>Passwords are never stored in plain text — <code>generate_password_hash()</code> /
-      <code>check_password_hash()</code> from Werkzeug handle salted hashing.</p>
 
-    <h3>2. Route protection with decorators</h3>
-    <div class="code-block">
-      <div class="code-head"><span>app.py — reusable auth guards</span><button class="copy-btn">Copy</button></div>
-      <pre><code>def login_required(f):
-    @wraps(f)
-    def wrapper(*args, **kwargs):
-        if "user_id" not in session:
-            return redirect(url_for("login"))
-        return f(*args, **kwargs)
-    return wrapper
+ML = load_ml_models()
 
-def admin_required(f):
-    @wraps(f)
-    def wrapper(*args, **kwargs):
-        if session.get("role") != "admin":
-            return redirect(url_for("dashboard"))
-        return f(*args, **kwargs)
-    return wrapper</code></pre>
-    </div>
-    <p>Any route just adds <code>@login_required</code> or <code>@admin_required</code> above it — no repeated
-      if-checks inside every view function.</p>
 
-    <h3>3. Complaint submission → ML prediction → storage</h3>
-    <div class="code-block">
-      <div class="code-head"><span>app.py — the core AI-integration point</span><button class="copy-btn">Copy</button></div>
-      <pre><code>@app.route("/submit-complaint", methods=["GET", "POST"])
-@login_required
-def submit_complaint():
-    if request.method == "POST":
-        text = request.form.get("complaint_text", "").strip()
-        prediction = predict_complaint(text)   # -&gt; category, priority, department
+def predict_complaint(text):
+    &quot;&quot;&quot;Run the 3 ML models on complaint text and return predictions.&quot;&quot;&quot;
+    if ML is None:
+        return {&quot;category&quot;: &quot;Unclassified&quot;, &quot;priority&quot;: &quot;Medium&quot;, &quot;department&quot;: &quot;Admin Office&quot;}
 
-        db = get_db()
-        db.execute(
-            """INSERT INTO complaints
-               (user_id, complaint_text, category, priority, department, status, created_at)
-               VALUES (?, ?, ?, ?, ?, 'Open', ?)""",
-            (session["user_id"], text, prediction["category"], prediction["priority"],
-             prediction["department"], datetime.now().isoformat()),
-        )
-        db.commit()
-        return redirect(url_for("dashboard"))
+    X = ML[&quot;vectorizer&quot;].transform([text])
 
-    return render_template("submit_complaint.html")</code></pre>
-    </div>
+    cat_pred = ML[&quot;category_model&quot;].predict(X)[0]
+    category = ML[&quot;category_encoder&quot;].inverse_transform([cat_pred])[0]
 
-    <h3>4. SQLite access pattern</h3>
-    <div class="code-block">
-      <div class="code-head"><span>app.py — per-request DB connection</span><button class="copy-btn">Copy</button></div>
-      <pre><code>def get_db():
-    if "db" not in g:
+    pri_pred = ML[&quot;priority_model&quot;].predict(X)[0]
+    priority = ML[&quot;priority_encoder&quot;].inverse_transform([pri_pred])[0]
+
+    dept_pred = ML[&quot;department_model&quot;].predict(X)[0]
+    department = ML[&quot;department_encoder&quot;].inverse_transform([dept_pred])[0]
+
+    return {&quot;category&quot;: category, &quot;priority&quot;: priority, &quot;department&quot;: department}
+
+
+# ------------------------------------------------------------------
+# Database helpers
+# ------------------------------------------------------------------
+def get_db():
+    if &quot;db&quot; not in g:
         g.db = sqlite3.connect(DB_PATH)
         g.db.row_factory = sqlite3.Row
     return g.db
 
+
 @app.teardown_appcontext
 def close_db(exception):
-    db = g.pop("db", None)
+    db = g.pop(&quot;db&quot;, None)
     if db is not None:
-        db.close()</code></pre>
+        db.close()
+
+
+def init_db():
+    db = sqlite3.connect(DB_PATH)
+    db.row_factory = sqlite3.Row
+    db.executescript(&quot;&quot;&quot;
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        role TEXT NOT NULL DEFAULT &#x27;customer&#x27;,   -- customer | admin | staff
+        created_at TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS complaints (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        complaint_text TEXT NOT NULL,
+        category TEXT,
+        priority TEXT,
+        department TEXT,
+        status TEXT NOT NULL DEFAULT &#x27;Open&#x27;,   -- Open | In Progress | Resolved
+        created_at TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users (id)
+    );
+    &quot;&quot;&quot;)
+
+    # create a default admin account if none exists
+    cur = db.execute(&quot;SELECT COUNT(*) as c FROM users WHERE role = &#x27;admin&#x27;&quot;)
+    if cur.fetchone()[&quot;c&quot;] == 0:
+        db.execute(
+            &quot;INSERT INTO users (name, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)&quot;,
+            (&quot;System Admin&quot;, &quot;admin@cms.local&quot;, generate_password_hash(&quot;admin123&quot;), &quot;admin&quot;,
+             datetime.now().isoformat()),
+        )
+    db.commit()
+    db.close()
+
+
+# ------------------------------------------------------------------
+# Auth helpers / decorators
+# ------------------------------------------------------------------
+def login_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if &quot;user_id&quot; not in session:
+            flash(&quot;Please log in to continue.&quot;, &quot;warning&quot;)
+            return redirect(url_for(&quot;login&quot;))
+        return f(*args, **kwargs)
+    return wrapper
+
+
+def admin_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if session.get(&quot;role&quot;) != &quot;admin&quot;:
+            flash(&quot;Admin access required.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;dashboard&quot;))
+        return f(*args, **kwargs)
+    return wrapper
+
+
+# ------------------------------------------------------------------
+# Routes - Auth
+# ------------------------------------------------------------------
+@app.route(&quot;/&quot;)
+def index():
+    if &quot;user_id&quot; in session:
+        return redirect(url_for(&quot;dashboard&quot;))
+    return redirect(url_for(&quot;login&quot;))
+
+
+@app.route(&quot;/register&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def register():
+    if request.method == &quot;POST&quot;:
+        name = request.form.get(&quot;name&quot;, &quot;&quot;).strip()
+        email = request.form.get(&quot;email&quot;, &quot;&quot;).strip().lower()
+        password = request.form.get(&quot;password&quot;, &quot;&quot;)
+
+        if not name or not email or not password:
+            flash(&quot;All fields are required.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;register&quot;))
+
+        db = get_db()
+        existing = db.execute(&quot;SELECT id FROM users WHERE email = ?&quot;, (email,)).fetchone()
+        if existing:
+            flash(&quot;An account with this email already exists.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;register&quot;))
+
+        db.execute(
+            &quot;INSERT INTO users (name, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)&quot;,
+            (name, email, generate_password_hash(password), &quot;customer&quot;, datetime.now().isoformat()),
+        )
+        db.commit()
+        flash(&quot;Account created successfully. Please log in.&quot;, &quot;success&quot;)
+        return redirect(url_for(&quot;login&quot;))
+
+    return render_template(&quot;register.html&quot;)
+
+
+@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    if request.method == &quot;POST&quot;:
+        email = request.form.get(&quot;email&quot;, &quot;&quot;).strip().lower()
+        password = request.form.get(&quot;password&quot;, &quot;&quot;)
+
+        db = get_db()
+        user = db.execute(&quot;SELECT * FROM users WHERE email = ?&quot;, (email,)).fetchone()
+
+        if user and check_password_hash(user[&quot;password_hash&quot;], password):
+            session[&quot;user_id&quot;] = user[&quot;id&quot;]
+            session[&quot;name&quot;] = user[&quot;name&quot;]
+            session[&quot;role&quot;] = user[&quot;role&quot;]
+            flash(f&quot;Welcome back, {user[&#x27;name&#x27;]}!&quot;, &quot;success&quot;)
+            return redirect(url_for(&quot;dashboard&quot;))
+
+        flash(&quot;Invalid email or password.&quot;, &quot;danger&quot;)
+        return redirect(url_for(&quot;login&quot;))
+
+    return render_template(&quot;login.html&quot;)
+
+
+@app.route(&quot;/logout&quot;)
+def logout():
+    session.clear()
+    flash(&quot;You have been logged out.&quot;, &quot;info&quot;)
+    return redirect(url_for(&quot;login&quot;))
+
+
+# ------------------------------------------------------------------
+# Routes - Customer
+# ------------------------------------------------------------------
+@app.route(&quot;/dashboard&quot;)
+@login_required
+def dashboard():
+    if session.get(&quot;role&quot;) == &quot;admin&quot;:
+        return redirect(url_for(&quot;admin_dashboard&quot;))
+
+    db = get_db()
+    complaints = db.execute(
+        &quot;SELECT * FROM complaints WHERE user_id = ? ORDER BY created_at DESC&quot;,
+        (session[&quot;user_id&quot;],),
+    ).fetchall()
+
+    stats = {
+        &quot;total&quot;: len(complaints),
+        &quot;open&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Open&quot;]),
+        &quot;in_progress&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;In Progress&quot;]),
+        &quot;resolved&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Resolved&quot;]),
+    }
+
+    return render_template(&quot;dashboard.html&quot;, complaints=complaints, stats=stats)
+
+
+@app.route(&quot;/submit-complaint&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+@login_required
+def submit_complaint():
+    if request.method == &quot;POST&quot;:
+        text = request.form.get(&quot;complaint_text&quot;, &quot;&quot;).strip()
+        if not text:
+            flash(&quot;Please describe your complaint.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;submit_complaint&quot;))
+
+        prediction = predict_complaint(text)
+
+        db = get_db()
+        db.execute(
+            &quot;&quot;&quot;INSERT INTO complaints
+               (user_id, complaint_text, category, priority, department, status, created_at)
+               VALUES (?, ?, ?, ?, ?, &#x27;Open&#x27;, ?)&quot;&quot;&quot;,
+            (session[&quot;user_id&quot;], text, prediction[&quot;category&quot;], prediction[&quot;priority&quot;],
+             prediction[&quot;department&quot;], datetime.now().isoformat()),
+        )
+        db.commit()
+
+        flash(
+            f&quot;Complaint submitted! AI classified it as &#x27;{prediction[&#x27;category&#x27;]}&#x27; &quot;
+            f&quot;({prediction[&#x27;priority&#x27;]} priority) -&gt; routed to {prediction[&#x27;department&#x27;]}.&quot;,
+            &quot;success&quot;,
+        )
+        return redirect(url_for(&quot;dashboard&quot;))
+
+    return render_template(&quot;submit_complaint.html&quot;)
+
+
+# ------------------------------------------------------------------
+# Routes - Admin
+# ------------------------------------------------------------------
+@app.route(&quot;/admin&quot;)
+@login_required
+@admin_required
+def admin_dashboard():
+    db = get_db()
+    complaints = db.execute(
+        &quot;&quot;&quot;SELECT complaints.*, users.name as user_name, users.email as user_email
+           FROM complaints JOIN users ON complaints.user_id = users.id
+           ORDER BY complaints.created_at DESC&quot;&quot;&quot;
+    ).fetchall()
+
+    stats = {
+        &quot;total&quot;: len(complaints),
+        &quot;open&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Open&quot;]),
+        &quot;in_progress&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;In Progress&quot;]),
+        &quot;resolved&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Resolved&quot;]),
+        &quot;high_priority&quot;: len([c for c in complaints if c[&quot;priority&quot;] == &quot;High&quot;]),
+    }
+
+    category_counts = {}
+    department_counts = {}
+    for c in complaints:
+        category_counts[c[&quot;category&quot;]] = category_counts.get(c[&quot;category&quot;], 0) + 1
+        department_counts[c[&quot;department&quot;]] = department_counts.get(c[&quot;department&quot;], 0) + 1
+
+    return render_template(
+        &quot;admin_dashboard.html&quot;,
+        complaints=complaints,
+        stats=stats,
+        category_counts=category_counts,
+        department_counts=department_counts,
+    )
+
+
+@app.route(&quot;/admin/complaint/&lt;int:complaint_id&gt;/status&quot;, methods=[&quot;POST&quot;])
+@login_required
+@admin_required
+def update_status(complaint_id):
+    new_status = request.form.get(&quot;status&quot;)
+    if new_status not in (&quot;Open&quot;, &quot;In Progress&quot;, &quot;Resolved&quot;):
+        flash(&quot;Invalid status.&quot;, &quot;danger&quot;)
+        return redirect(url_for(&quot;admin_dashboard&quot;))
+
+    db = get_db()
+    db.execute(&quot;UPDATE complaints SET status = ? WHERE id = ?&quot;, (new_status, complaint_id))
+    db.commit()
+    flash(&quot;Complaint status updated.&quot;, &quot;success&quot;)
+    return redirect(url_for(&quot;admin_dashboard&quot;))
+
+
+# ------------------------------------------------------------------
+if __name__ == &quot;__main__&quot;:
+    if not os.path.exists(DB_PATH):
+        init_db()
+    else:
+        init_db()  # safe to call - uses IF NOT EXISTS
+    app.run(debug=True)</code></pre>
     </div>
-    <p>Flask's <code>g</code> object keeps one connection per request and closes it automatically — this is the
-      standard pattern for SQLite in Flask, avoiding leaked connections.</p>
+
+    </div>
   </section>
 
-  <!-- ================= ML DOCS ================= -->
-  <section id="ml-docs">
-    <div class="eyebrow">Section 08 — Backend</div>
-    <h2>Machine Learning Pipeline</h2>
-    <p>Three separate <b style="color:var(--text)">supervised</b> models share one TF-IDF vectorizer. Training happens
-      offline once; Flask only loads the saved <code>.pkl</code> files and calls <code>.predict()</code> — no
-      retraining at request time.</p>
+
+  <section id="day4">
+    <div class="eyebrow">Day 4 · Thursday</div>
+    <h2>Machine Learning — Dataset + Model Training</h2>
+
+    <ul class="plain">
+      <li>Decide the 3 prediction targets: Category (8 classes: Network, Software, Hardware, HR, Finance, Hostel, Academic, Administration), Priority (High/Medium/Low), Department.</li>
+      <li>For each category, write 5-6 realistic complaint-sentence templates with placeholders, e.g. "WiFi is not working in {place}".</li>
+      <li>Write a Python script that fills in the placeholders randomly to generate many unique-sounding rows per category.</li>
+      <li>Assign a department to each category, and a weighted random priority per category.</li>
+      <li>Generate at least 100+ rows per category (960 rows total is a good target), save as <code>dataset/complaints_dataset.csv</code>.</li>
+      <li>Load the CSV with pandas and check: missing values? balanced categories? exact duplicate rows?</li>
+      <li>Build ONE shared TF-IDF vectorizer, fit it on all complaint text, save it.</li>
+      <li>Train Model 1: Category prediction — Logistic Regression (encode labels first with LabelEncoder).</li>
+      <li>Train Model 2: Priority prediction — Random Forest, same TF-IDF features.</li>
+      <li>Train Model 3: Department prediction — Logistic Regression.</li>
+      <li>For each model, split 80/20, evaluate with <code>accuracy_score</code> and <code>classification_report</code>, and record the accuracy.</li>
+      <li>Save all 3 models + label encoders + the shared vectorizer as <code>.pkl</code> files with <code>joblib.dump()</code>, inside <code>machine_learning/models/</code>.</li>
+      <li>Document WHY priority prediction is usually less accurate than category prediction.</li>
+    </ul>
+
+    <div class="solution-box">
+      <div class="sol-head">Reference Solution</div>
+      <span class="file-label">dataset/generate_dataset.py — complete file, exact copy from the project (all 8 categories, ~960 rows)</span>
+    <div class="code-block">
+      <div class="code-head"><span>dataset/generate_dataset.py</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&quot;&quot;&quot;
+generate_dataset.py
+Generates a realistic synthetic complaint dataset for the
+AI Complaint Management System.
+
+Run: python dataset/generate_dataset.py
+Output: dataset/complaints_dataset.csv
+&quot;&quot;&quot;
+
+import csv
+import random
+import os
+
+random.seed(42)
+
+# ---------------------------------------------------------
+# Complaint templates grouped by Category
+# Each template list has variations to make the dataset richer
+# ---------------------------------------------------------
+
+CATEGORY_DATA = {
+    &quot;Network&quot;: {
+        &quot;department&quot;: &quot;IT&quot;,
+        &quot;templates&quot;: [
+            &quot;WiFi is not working in {place}&quot;,
+            &quot;Internet connection keeps disconnecting in {place}&quot;,
+            &quot;Network is extremely slow in {place}&quot;,
+            &quot;Unable to connect to the campus WiFi from {place}&quot;,
+            &quot;LAN cable in {place} is not working&quot;,
+            &quot;WiFi signal is very weak near {place}&quot;,
+        ],
+    },
+    &quot;Software&quot;: {
+        &quot;department&quot;: &quot;Development&quot;,
+        &quot;templates&quot;: [
+            &quot;Student portal is down and I cannot login&quot;,
+            &quot;Portal shows error 500 when submitting {thing}&quot;,
+            &quot;Unable to upload {thing} on the student portal&quot;,
+            &quot;Login page of the portal is not loading&quot;,
+            &quot;Portal is showing incorrect {thing} details&quot;,
+            &quot;Mobile app crashes when I open {thing} section&quot;,
+        ],
+    },
+    &quot;Hardware&quot;: {
+        &quot;department&quot;: &quot;IT&quot;,
+        &quot;templates&quot;: [
+            &quot;Printer in {place} is not printing&quot;,
+            &quot;Projector in {place} is not turning on&quot;,
+            &quot;Computer in {place} is not booting up&quot;,
+            &quot;Keyboard in {place} lab is broken&quot;,
+            &quot;Monitor in {place} has a black screen&quot;,
+            &quot;Scanner in {place} is out of order&quot;,
+        ],
+    },
+    &quot;HR&quot;: {
+        &quot;department&quot;: &quot;HR&quot;,
+        &quot;templates&quot;: [
+            &quot;Salary not received for the month of {month}&quot;,
+            &quot;Leave request not approved since {month}&quot;,
+            &quot;HR is not responding to my resignation email&quot;,
+            &quot;Incorrect deduction shown in {month} salary slip&quot;,
+            &quot;Appointment letter not issued yet&quot;,
+            &quot;Provident fund details are missing for {month}&quot;,
+        ],
+    },
+    &quot;Finance&quot;: {
+        &quot;department&quot;: &quot;Accounts&quot;,
+        &quot;templates&quot;: [
+            &quot;Fee voucher is showing incorrect amount&quot;,
+            &quot;Fee already paid but portal shows {thing} pending&quot;,
+            &quot;Scholarship amount not credited for {month}&quot;,
+            &quot;Refund request for {thing} not processed&quot;,
+            &quot;Duplicate fee charged for {thing}&quot;,
+            &quot;Bank transaction failed but amount deducted for {thing}&quot;,
+        ],
+    },
+    &quot;Hostel&quot;: {
+        &quot;department&quot;: &quot;Hostel Office&quot;,
+        &quot;templates&quot;: [
+            &quot;Electricity issue in hostel room {room}&quot;,
+            &quot;Water is not available in hostel {place}&quot;,
+            &quot;Hostel room {room} AC is not working&quot;,
+            &quot;Mess food quality complaint for {place}&quot;,
+            &quot;Hostel WiFi not working in room {room}&quot;,
+            &quot;Washroom in hostel {place} needs urgent repair&quot;,
+        ],
+    },
+    &quot;Academic&quot;: {
+        &quot;department&quot;: &quot;Academic Office&quot;,
+        &quot;templates&quot;: [
+            &quot;Result of {thing} not uploaded on portal&quot;,
+            &quot;Attendance shortage error for {thing} course&quot;,
+            &quot;Exam datesheet clash between {thing} and {thing2}&quot;,
+            &quot;Transcript request pending since {month}&quot;,
+            &quot;Course registration issue for {thing}&quot;,
+            &quot;Incorrect GPA shown for semester {sem}&quot;,
+        ],
+    },
+    &quot;Administration&quot;: {
+        &quot;department&quot;: &quot;Admin Office&quot;,
+        &quot;templates&quot;: [
+            &quot;ID card not issued after {month}&quot;,
+            &quot;No response from admin office regarding {thing}&quot;,
+            &quot;Parking issue near {place}&quot;,
+            &quot;Security guard misbehavior reported near {place}&quot;,
+            &quot;Cleanliness issue in {place}&quot;,
+            &quot;Noise complaint from {place} during exams&quot;,
+        ],
+    },
+}
+
+PLACES = [&quot;Lab 1&quot;, &quot;Lab 2&quot;, &quot;Lab 3&quot;, &quot;Main Block&quot;, &quot;Library&quot;, &quot;Auditorium&quot;,
+          &quot;Boys Hostel&quot;, &quot;Girls Hostel&quot;, &quot;Cafeteria&quot;, &quot;Admin Block&quot;,
+          &quot;Seminar Hall&quot;, &quot;Computer Lab&quot;, &quot;Reading Room&quot;, &quot;Sports Complex&quot;]
+
+THINGS = [&quot;assignment&quot;, &quot;fee challan&quot;, &quot;attendance sheet&quot;, &quot;result card&quot;,
+          &quot;transcript&quot;, &quot;course registration&quot;, &quot;profile picture&quot;,
+          &quot;internship report&quot;, &quot;thesis document&quot;, &quot;leave application&quot;]
+
+THINGS2 = [&quot;Database Systems&quot;, &quot;Software Engineering&quot;, &quot;Operating Systems&quot;,
+           &quot;Data Structures&quot;, &quot;Requirement Engineering&quot;, &quot;Networks&quot;]
+
+MONTHS = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;,
+          &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;]
+
+SEMESTERS = [&quot;3rd&quot;, &quot;4th&quot;, &quot;5th&quot;, &quot;6th&quot;, &quot;7th&quot;, &quot;8th&quot;]
+
+ROOMS = [f&quot;{b}-{n}&quot; for b in [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;] for n in range(101, 120)]
+
+PRIORITY_RULES = {
+    # category -&gt; weighted priority distribution
+    &quot;Network&quot;: [&quot;Medium&quot;, &quot;Medium&quot;, &quot;Low&quot;, &quot;High&quot;],
+    &quot;Software&quot;: [&quot;High&quot;, &quot;Medium&quot;, &quot;High&quot;, &quot;Medium&quot;],
+    &quot;Hardware&quot;: [&quot;Low&quot;, &quot;Medium&quot;, &quot;Low&quot;],
+    &quot;HR&quot;: [&quot;High&quot;, &quot;High&quot;, &quot;Medium&quot;],
+    &quot;Finance&quot;: [&quot;High&quot;, &quot;Medium&quot;, &quot;High&quot;],
+    &quot;Hostel&quot;: [&quot;Medium&quot;, &quot;High&quot;, &quot;Medium&quot;, &quot;Low&quot;],
+    &quot;Academic&quot;: [&quot;High&quot;, &quot;Medium&quot;, &quot;High&quot;],
+    &quot;Administration&quot;: [&quot;Low&quot;, &quot;Medium&quot;, &quot;Low&quot;],
+}
+
+
+def fill_template(template):
+    return template.format(
+        place=random.choice(PLACES),
+        thing=random.choice(THINGS),
+        thing2=random.choice(THINGS2),
+        month=random.choice(MONTHS),
+        room=random.choice(ROOMS),
+        sem=random.choice(SEMESTERS),
+    )
+
+
+def generate_rows(n_per_category=120):
+    rows = []
+    for category, data in CATEGORY_DATA.items():
+        dept = data[&quot;department&quot;]
+        templates = data[&quot;templates&quot;]
+        for _ in range(n_per_category):
+            template = random.choice(templates)
+            text = fill_template(template)
+            priority = random.choice(PRIORITY_RULES[category])
+            rows.append({
+                &quot;complaint_text&quot;: text,
+                &quot;category&quot;: category,
+                &quot;priority&quot;: priority,
+                &quot;department&quot;: dept,
+            })
+    random.shuffle(rows)
+    return rows
+
+
+def main():
+    rows = generate_rows(n_per_category=120)  # ~960 rows total
+    out_dir = os.path.dirname(os.path.abspath(__file__))
+    out_path = os.path.join(out_dir, &quot;complaints_dataset.csv&quot;)
+
+    with open(out_path, &quot;w&quot;, newline=&quot;&quot;, encoding=&quot;utf-8&quot;) as f:
+        writer = csv.DictWriter(f, fieldnames=[&quot;complaint_text&quot;, &quot;category&quot;, &quot;priority&quot;, &quot;department&quot;])
+        writer.writeheader()
+        writer.writerows(rows)
+
+    print(f&quot;Generated {len(rows)} complaint records -&gt; {out_path}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+    </div>
+
+      <span class="file-label">machine_learning/train_models.py — complete file, exact copy from the project</span>
+    <div class="code-block">
+      <div class="code-head"><span>machine_learning/train_models.py</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&quot;&quot;&quot;
+train_models.py
+Trains 3 supervised ML models on the complaint dataset:
+  1. Category prediction   (TF-IDF + Logistic Regression)
+  2. Priority prediction   (TF-IDF + Random Forest)
+  3. Department prediction (TF-IDF + Logistic Regression)
+
+Saves trained models + vectorizer + label encoders as .pkl files
+inside machine_learning/models/
+
+Run: python machine_learning/train_models.py
+&quot;&quot;&quot;
+
+import os
+import pandas as pd
+import joblib
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score, classification_report
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+DATASET_PATH = os.path.join(PROJECT_ROOT, &quot;dataset&quot;, &quot;complaints_dataset.csv&quot;)
+MODELS_DIR = os.path.join(BASE_DIR, &quot;models&quot;)
+
+os.makedirs(MODELS_DIR, exist_ok=True)
+
+
+def load_data():
+    if not os.path.exists(DATASET_PATH):
+        raise FileNotFoundError(
+            f&quot;Dataset not found at {DATASET_PATH}. &quot;
+            &quot;Run: python dataset/generate_dataset.py first.&quot;
+        )
+    df = pd.read_csv(DATASET_PATH)
+    df = df.dropna()
+    return df
+
+
+def train_and_save(df, target_col, model, model_filename, vectorizer, encoder_filename):
+    X_text = df[&quot;complaint_text&quot;]
+    y_raw = df[target_col]
+
+    encoder = LabelEncoder()
+    y = encoder.fit_transform(y_raw)
+
+    X = vectorizer.transform(X_text)
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
+
+    model.fit(X_train, y_train)
+    preds = model.predict(X_test)
+    acc = accuracy_score(y_test, preds)
+
+    print(f&quot;\n=== {target_col.upper()} MODEL ===&quot;)
+    print(f&quot;Accuracy: {acc:.4f}&quot;)
+    print(classification_report(y_test, preds, target_names=encoder.classes_, zero_division=0))
+
+    joblib.dump(model, os.path.join(MODELS_DIR, model_filename))
+    joblib.dump(encoder, os.path.join(MODELS_DIR, encoder_filename))
+
+    return acc
+
+
+def main():
+    df = load_data()
+    print(f&quot;Loaded {len(df)} complaint records.&quot;)
+
+    # Shared TF-IDF vectorizer trained on all complaint text
+    vectorizer = TfidfVectorizer(max_features=3000, ngram_range=(1, 2), stop_words=&quot;english&quot;)
+    vectorizer.fit(df[&quot;complaint_text&quot;])
+    joblib.dump(vectorizer, os.path.join(MODELS_DIR, &quot;tfidf_vectorizer.pkl&quot;))
+
+    # 1. Category prediction -&gt; Logistic Regression
+    train_and_save(
+        df, &quot;category&quot;,
+        LogisticRegression(max_iter=1000),
+        &quot;category_model.pkl&quot;,
+        vectorizer,
+        &quot;category_encoder.pkl&quot;,
+    )
+
+    # 2. Priority prediction -&gt; Random Forest
+    train_and_save(
+        df, &quot;priority&quot;,
+        RandomForestClassifier(n_estimators=200, random_state=42),
+        &quot;priority_model.pkl&quot;,
+        vectorizer,
+        &quot;priority_encoder.pkl&quot;,
+    )
+
+    # 3. Department prediction -&gt; Logistic Regression
+    train_and_save(
+        df, &quot;department&quot;,
+        LogisticRegression(max_iter=1000),
+        &quot;department_model.pkl&quot;,
+        vectorizer,
+        &quot;department_encoder.pkl&quot;,
+    )
+
+    print(&quot;\nAll models trained and saved to:&quot;, MODELS_DIR)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+    </div>
+
+    </div>
 
     <table>
       <tr><th>Task</th><th>Algorithm</th><th>Accuracy</th></tr>
@@ -1141,61 +1907,563 @@ def close_db(exception):
       <tr><td>Priority prediction</td><td>TF-IDF + Random Forest</td><td><span class="tag tag-amber">~51%</span></td></tr>
       <tr><td>Department prediction</td><td>TF-IDF + Logistic Regression</td><td><span class="tag tag-teal">~100%</span></td></tr>
     </table>
-
     <div class="callout"><b>Why is priority accuracy lower?</b> Category and department are strongly implied by the
-      words in a complaint. Priority isn't — in reality it depends on context the text alone doesn't carry (repeat
-      complaints, deadlines, who's affected). This is a legitimate ML limitation to explain in a viva, not a bug.</div>
-
-    <h3>Training a model</h3>
-    <div class="code-block">
-      <div class="code-head"><span>machine_learning/train_models.py</span><button class="copy-btn">Copy</button></div>
-      <pre><code>vectorizer = TfidfVectorizer(max_features=3000, ngram_range=(1, 2), stop_words="english")
-vectorizer.fit(df["complaint_text"])
-
-encoder = LabelEncoder()
-y = encoder.fit_transform(df["category"])
-X = vectorizer.transform(df["complaint_text"])
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y)
-
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
-
-joblib.dump(model, "category_model.pkl")
-joblib.dump(encoder, "category_encoder.pkl")</code></pre>
-    </div>
-
-    <h3>Running inference in Flask</h3>
-    <div class="code-block">
-      <div class="code-head"><span>app.py — predict_complaint()</span><button class="copy-btn">Copy</button></div>
-      <pre><code>def predict_complaint(text):
-    X = ML["vectorizer"].transform([text])
-
-    cat_pred = ML["category_model"].predict(X)[0]
-    category = ML["category_encoder"].inverse_transform([cat_pred])[0]
-
-    pri_pred = ML["priority_model"].predict(X)[0]
-    priority = ML["priority_encoder"].inverse_transform([pri_pred])[0]
-
-    dept_pred = ML["department_model"].predict(X)[0]
-    department = ML["department_encoder"].inverse_transform([dept_pred])[0]
-
-    return {"category": category, "priority": priority, "department": department}</code></pre>
-    </div>
-    <p>All models are loaded once into a module-level <code>ML</code> dict at Flask startup — not on every request —
-      so prediction is effectively instant.</p>
+      words in a complaint. Priority isn't — it depends on context the text alone doesn't carry (repeat complaints,
+      deadlines, who's affected). A legitimate ML limitation to note in documentation, not a bug.</div>
   </section>
 
-  <!-- ================= SETUP ================= -->
+
+  <section id="day5">
+    <div class="eyebrow">Day 5 · Friday <span class="tag tag-amber">sync point</span></div>
+    <h2>Integration — Flask + ML + Admin Dashboard</h2>
+    <ul class="plain">
+      <li>At Flask startup, load all 7 saved <code>.pkl</code> files ONCE (not per-request) — the vectorizer, 3 models, 3 encoders.</li>
+      <li>Write <code>predict_complaint(text)</code>: transform the text with the vectorizer, run it through each model, then <code>inverse_transform</code> the numeric prediction back into a readable label.</li>
+      <li>Update <code>/submit-complaint</code> to call <code>predict_complaint()</code> instead of hardcoding 'Unclassified', and store the real predictions.</li>
+      <li>Show the user a confirmation message including what the AI predicted (category / priority / department).</li>
+      <li>Build <code>/admin</code>: join <code>complaints</code> with <code>users</code> to show who submitted each one.</li>
+      <li>Compute in the admin route: total/open/in-progress/resolved counts, high-priority count, category and department breakdowns.</li>
+      <li>Build <code>templates/admin_dashboard.html</code>: stat cards, category/department breakdown bars, full complaints table with a status dropdown per row.</li>
+      <li>Build <code>/admin/complaint/&lt;id&gt;/status</code> (POST) so status can be changed, wired to the dropdown.</li>
+      <li>Test end-to-end as a fresh user: register → login → submit a complaint → see it classified correctly → login as admin → see it → change its status → confirm it updates on the customer's dashboard too.</li>
+    </ul>
+    <div class="callout"><b>Deliverable:</b> a submitted complaint is automatically classified by the trained models
+      and correctly routed; the admin panel can see everything and change status.</div>
+
+    <div class="solution-box">
+      <div class="sol-head">Reference Solution — ML loading, prediction, and admin routes</div>
+      <p>These functions are already part of the complete <code>app.py</code> shown under Day 3 (the final version
+        of the file includes the ML integration): <code>load_ml_models()</code>, <code>predict_complaint()</code>,
+        the updated <code>submit_complaint()</code>, <code>admin_dashboard()</code>, and <code>update_status()</code>.
+        See <a href="#day3">Day 3 → app.py</a> for the full file.</p>
+      <span class="file-label">templates/admin_dashboard.html — complete file, exact copy from the project</span>
+    <div class="code-block">
+      <div class="code-head"><span>templates/admin_dashboard.html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>{% extends &quot;base.html&quot; %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+&lt;div class=&quot;page-header&quot;&gt;
+    &lt;h1&gt;Admin Dashboard&lt;/h1&gt;
+    &lt;p class=&quot;muted&quot;&gt;Overview of all complaints across the system.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;stats-grid&quot;&gt;
+    &lt;div class=&quot;stat-card&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.total }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Total&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-open&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.open }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Open&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-progress&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.in_progress }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;In Progress&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-resolved&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.resolved }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;Resolved&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat-card stat-high&quot;&gt;&lt;span class=&quot;stat-num&quot;&gt;{{ stats.high_priority }}&lt;/span&gt;&lt;span class=&quot;stat-label&quot;&gt;High Priority&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;grid-2&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;By Category&lt;/h2&gt;
+        {% for cat, count in category_counts.items() %}
+        &lt;div class=&quot;bar-row&quot;&gt;
+            &lt;span class=&quot;bar-label&quot;&gt;{{ cat }}&lt;/span&gt;
+            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: {{ (count / stats.total * 100) if stats.total else 0 }}%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;span class=&quot;bar-count&quot;&gt;{{ count }}&lt;/span&gt;
+        &lt;/div&gt;
+        {% endfor %}
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;By Department&lt;/h2&gt;
+        {% for dept, count in department_counts.items() %}
+        &lt;div class=&quot;bar-row&quot;&gt;
+            &lt;span class=&quot;bar-label&quot;&gt;{{ dept }}&lt;/span&gt;
+            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill bar-fill-alt&quot; style=&quot;width: {{ (count / stats.total * 100) if stats.total else 0 }}%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;span class=&quot;bar-count&quot;&gt;{{ count }}&lt;/span&gt;
+        &lt;/div&gt;
+        {% endfor %}
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+    &lt;h2&gt;All Complaints&lt;/h2&gt;
+    {% if complaints %}
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Complaint&lt;/th&gt;
+                &lt;th&gt;User&lt;/th&gt;
+                &lt;th&gt;Category&lt;/th&gt;
+                &lt;th&gt;Priority&lt;/th&gt;
+                &lt;th&gt;Department&lt;/th&gt;
+                &lt;th&gt;Status&lt;/th&gt;
+                &lt;th&gt;Date&lt;/th&gt;
+                &lt;th&gt;Update&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        {% for c in complaints %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ c.complaint_text }}&lt;/td&gt;
+                &lt;td&gt;{{ c.user_name }}&lt;br&gt;&lt;span class=&quot;muted small&quot;&gt;{{ c.user_email }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag&quot;&gt;{{ c.category }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag tag-priority-{{ c.priority|lower }}&quot;&gt;{{ c.priority }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;{{ c.department }}&lt;/td&gt;
+                &lt;td&gt;&lt;span class=&quot;tag tag-status-{{ c.status|lower|replace(&#x27; &#x27;, &#x27;&#x27;) }}&quot;&gt;{{ c.status }}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;{{ c.created_at[:10] }}&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;form method=&quot;POST&quot; action=&quot;{{ url_for(&#x27;update_status&#x27;, complaint_id=c.id) }}&quot; class=&quot;inline-form&quot;&gt;
+                        &lt;select name=&quot;status&quot;&gt;
+                            &lt;option value=&quot;Open&quot; {% if c.status == &#x27;Open&#x27; %}selected{% endif %}&gt;Open&lt;/option&gt;
+                            &lt;option value=&quot;In Progress&quot; {% if c.status == &#x27;In Progress&#x27; %}selected{% endif %}&gt;In Progress&lt;/option&gt;
+                            &lt;option value=&quot;Resolved&quot; {% if c.status == &#x27;Resolved&#x27; %}selected{% endif %}&gt;Resolved&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn-small btn-primary&quot;&gt;Update&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    {% else %}
+    &lt;p class=&quot;muted&quot;&gt;No complaints submitted yet.&lt;/p&gt;
+    {% endif %}
+&lt;/div&gt;
+{% endblock %}</code></pre>
+    </div>
+
+    </div>
+  </section>
+
+
+  <section id="day6">
+    <div class="eyebrow">Day 6 · Saturday</div>
+    <h2>Testing &amp; Bug Fixing</h2>
+    <ul class="plain">
+      <li>Write a manual test checklist and run through it: register, login (correct + wrong password), submit complaint, view dashboard, admin login, change status, logout.</li>
+      <li>Test edge cases: empty complaint text, registering with an email that already exists, a non-admin user trying to open <code>/admin</code> directly by typing the URL.</li>
+      <li>Every bug found gets its own GitHub Issue — assigned and closed with the fixing commit/PR.</li>
+      <li>UI polish pass: spacing, colors, button states, mobile view — on all pages.</li>
+      <li>Verify the app in at least two browsers.</li>
+      <li>Re-run <code>train_models.py</code> once more and confirm the saved models still match what <code>app.py</code> expects (same file names, same folder).</li>
+    </ul>
+
+    <h3>Test Flow Checklist</h3>
+    <table>
+      <tr><th>Flow</th><th>Expected result</th></tr>
+      <tr><td>Register new account</td><td>Redirects to login with a success message</td></tr>
+      <tr><td>Login with wrong password</td><td>Shows "Invalid email or password", stays on login</td></tr>
+      <tr><td>Register with an already-used email</td><td>Shows "An account with this email already exists"</td></tr>
+      <tr><td>Submit a network-related complaint</td><td>Auto-classified as <span class="tag tag-amber">Network</span> → routed to <span class="tag">IT</span></td></tr>
+      <tr><td>Non-admin visits <code>/admin</code> directly</td><td>Redirected back to <code>/dashboard</code> with "Admin access required"</td></tr>
+      <tr><td>Login as admin</td><td>Redirects to <code>/admin</code>, not the customer dashboard</td></tr>
+      <tr><td>Update complaint status</td><td>Status tag changes immediately on refresh, and on the customer's own dashboard</td></tr>
+      <tr><td>Resize to mobile width</td><td>Sidebar/nav collapses, tables remain scrollable</td></tr>
+    </table>
+    <div class="callout"><b>Deliverable:</b> a bug list (as closed GitHub Issues) and a working, polished app with no known broken flows.</div>
+  </section>
+
+
+  <section id="day7">
+    <div class="eyebrow">Day 7 · Sunday</div>
+    <h2>Finalization</h2>
+    <ul class="plain">
+      <li>Full code walkthrough: <code>app.py</code>, the templates, and <code>train_models.py</code> reviewed line by line for accuracy and completeness.</li>
+      <li>Rewrite the README fully: purpose, features, tech stack, ML overview table (task/algorithm/accuracy), full setup steps, default admin login, folder structure, and a short "How it Works" section.</li>
+      <li>Confirm <code>requirements.txt</code> lists every package actually used (Flask, Werkzeug, pandas, scikit-learn, joblib).</li>
+      <li>Confirm <code>.gitignore</code> excludes <code>venv/</code>, <code>__pycache__/</code>, and <code>database.db</code>.</li>
+      <li>Prepare a short demo script: register → login → submit a complaint → show AI classification → admin dashboard → change status.</li>
+      <li><i>Optional</i> — Deploy: push to GitHub, connect the repo to Render or Railway, set the start command to <code>gunicorn app:app</code>, and set a real random <code>secret_key</code> via an environment variable instead of the hardcoded one.</li>
+      <li>Final Pull Request reviewed and merged into <code>main</code>. Tag the release as <code>v1.0</code>.</li>
+    </ul>
+    <div class="callout"><b>Deliverable:</b> final GitHub repo tagged as v1.0, complete README, ready for demo/handover.</div>
+  </section>
+
+
+  <section id="architecture">
+    <div class="eyebrow">Reference</div>
+    <h2>Architecture &amp; File Structure</h2>
+    <p>Four clean layers: dataset, ML, backend, and templates/static — each independently testable.</p>
+
+    <div class="tree">
+<span class="dir">AI-Complaint-Management-System/</span>
+├── <span class="file">app.py</span>                          <span class="cmt"># Flask app: routes, auth, DB, ML calls</span>
+├── <span class="file">requirements.txt</span>
+├── <span class="file">database.db</span>                 <span class="cmt"># auto-created on first run, .gitignored</span>
+├── <span class="dir">dataset/</span>
+│&nbsp;&nbsp;├── <span class="file">generate_dataset.py</span>         <span class="cmt"># synthetic labeled data generator</span>
+│&nbsp;&nbsp;└── <span class="file">complaints_dataset.csv</span>       <span class="cmt"># ~960 rows, 8 categories</span>
+├── <span class="dir">machine_learning/</span>
+│&nbsp;&nbsp;├── <span class="file">train_models.py</span>            <span class="cmt"># trains + saves all 3 models</span>
+│&nbsp;&nbsp;└── <span class="dir">models/</span>                     <span class="cmt"># .pkl artifacts</span>
+├── <span class="dir">templates/</span>                       <span class="cmt"># Jinja2 HTML</span>
+│&nbsp;&nbsp;├── <span class="file">base.html</span>
+│&nbsp;&nbsp;├── <span class="file">login.html</span> · <span class="file">register.html</span>
+│&nbsp;&nbsp;├── <span class="file">dashboard.html</span> · <span class="file">submit_complaint.html</span>
+│&nbsp;&nbsp;└── <span class="file">admin_dashboard.html</span>
+└── <span class="dir">static/</span>
+&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="dir">css/style.css</span>
+    </div>
+
+    <div class="card-grid">
+      <div class="card"><div class="k">Frontend</div><div class="v">HTML5 + hand-written CSS (no framework dependency)</div></div>
+      <div class="card"><div class="k">Backend</div><div class="v">Flask 3, session-based auth, server-rendered Jinja2 templates</div></div>
+      <div class="card"><div class="k">Database</div><div class="v">SQLite for development — drop-in swap to MySQL/PostgreSQL for production</div></div>
+      <div class="card"><div class="k">Machine Learning</div><div class="v">scikit-learn: TF-IDF + Logistic Regression / Random Forest, trained offline, loaded as <code>.pkl</code></div></div>
+    </div>
+  </section>
+
+
+  <section id="flask-docs">
+    <div class="eyebrow">Reference</div>
+    <h2>Full app.py — Single Source of Truth</h2>
+    <p>Every backend route from Days 3 and 5 lives in this one file. This is the complete, final version.</p>
+    <div class="code-block">
+      <div class="code-head"><span>app.py — complete file</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&quot;&quot;&quot;
+AI Complaint Management System
+Flask application entry point.
+
+Run:
+    1. python dataset/generate_dataset.py       (already generated, optional)
+    2. python machine_learning/train_models.py  (already trained, optional)
+    3. python app.py
+    4. Open http://127.0.0.1:5000
+&quot;&quot;&quot;
+
+import os
+import sqlite3
+from datetime import datetime
+from functools import wraps
+
+import joblib
+from flask import Flask, render_template, request, redirect, url_for, session, flash, g
+from werkzeug.security import generate_password_hash, check_password_hash
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, &quot;database.db&quot;)
+MODELS_DIR = os.path.join(BASE_DIR, &quot;machine_learning&quot;, &quot;models&quot;)
+
+app = Flask(__name__)
+app.secret_key = &quot;change-this-secret-key-in-production&quot;
+
+
+# ------------------------------------------------------------------
+# ML models - loaded once at startup
+# ------------------------------------------------------------------
+def load_ml_models():
+    required = [
+        &quot;tfidf_vectorizer.pkl&quot;, &quot;category_model.pkl&quot;, &quot;category_encoder.pkl&quot;,
+        &quot;priority_model.pkl&quot;, &quot;priority_encoder.pkl&quot;,
+        &quot;department_model.pkl&quot;, &quot;department_encoder.pkl&quot;,
+    ]
+    missing = [f for f in required if not os.path.exists(os.path.join(MODELS_DIR, f))]
+    if missing:
+        print(&quot;WARNING: ML models not found:&quot;, missing)
+        print(&quot;Run: python machine_learning/train_models.py&quot;)
+        return None
+
+    return {
+        &quot;vectorizer&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;tfidf_vectorizer.pkl&quot;)),
+        &quot;category_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;category_model.pkl&quot;)),
+        &quot;category_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;category_encoder.pkl&quot;)),
+        &quot;priority_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;priority_model.pkl&quot;)),
+        &quot;priority_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;priority_encoder.pkl&quot;)),
+        &quot;department_model&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;department_model.pkl&quot;)),
+        &quot;department_encoder&quot;: joblib.load(os.path.join(MODELS_DIR, &quot;department_encoder.pkl&quot;)),
+    }
+
+
+ML = load_ml_models()
+
+
+def predict_complaint(text):
+    &quot;&quot;&quot;Run the 3 ML models on complaint text and return predictions.&quot;&quot;&quot;
+    if ML is None:
+        return {&quot;category&quot;: &quot;Unclassified&quot;, &quot;priority&quot;: &quot;Medium&quot;, &quot;department&quot;: &quot;Admin Office&quot;}
+
+    X = ML[&quot;vectorizer&quot;].transform([text])
+
+    cat_pred = ML[&quot;category_model&quot;].predict(X)[0]
+    category = ML[&quot;category_encoder&quot;].inverse_transform([cat_pred])[0]
+
+    pri_pred = ML[&quot;priority_model&quot;].predict(X)[0]
+    priority = ML[&quot;priority_encoder&quot;].inverse_transform([pri_pred])[0]
+
+    dept_pred = ML[&quot;department_model&quot;].predict(X)[0]
+    department = ML[&quot;department_encoder&quot;].inverse_transform([dept_pred])[0]
+
+    return {&quot;category&quot;: category, &quot;priority&quot;: priority, &quot;department&quot;: department}
+
+
+# ------------------------------------------------------------------
+# Database helpers
+# ------------------------------------------------------------------
+def get_db():
+    if &quot;db&quot; not in g:
+        g.db = sqlite3.connect(DB_PATH)
+        g.db.row_factory = sqlite3.Row
+    return g.db
+
+
+@app.teardown_appcontext
+def close_db(exception):
+    db = g.pop(&quot;db&quot;, None)
+    if db is not None:
+        db.close()
+
+
+def init_db():
+    db = sqlite3.connect(DB_PATH)
+    db.row_factory = sqlite3.Row
+    db.executescript(&quot;&quot;&quot;
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        role TEXT NOT NULL DEFAULT &#x27;customer&#x27;,   -- customer | admin | staff
+        created_at TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS complaints (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        complaint_text TEXT NOT NULL,
+        category TEXT,
+        priority TEXT,
+        department TEXT,
+        status TEXT NOT NULL DEFAULT &#x27;Open&#x27;,   -- Open | In Progress | Resolved
+        created_at TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users (id)
+    );
+    &quot;&quot;&quot;)
+
+    # create a default admin account if none exists
+    cur = db.execute(&quot;SELECT COUNT(*) as c FROM users WHERE role = &#x27;admin&#x27;&quot;)
+    if cur.fetchone()[&quot;c&quot;] == 0:
+        db.execute(
+            &quot;INSERT INTO users (name, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)&quot;,
+            (&quot;System Admin&quot;, &quot;admin@cms.local&quot;, generate_password_hash(&quot;admin123&quot;), &quot;admin&quot;,
+             datetime.now().isoformat()),
+        )
+    db.commit()
+    db.close()
+
+
+# ------------------------------------------------------------------
+# Auth helpers / decorators
+# ------------------------------------------------------------------
+def login_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if &quot;user_id&quot; not in session:
+            flash(&quot;Please log in to continue.&quot;, &quot;warning&quot;)
+            return redirect(url_for(&quot;login&quot;))
+        return f(*args, **kwargs)
+    return wrapper
+
+
+def admin_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if session.get(&quot;role&quot;) != &quot;admin&quot;:
+            flash(&quot;Admin access required.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;dashboard&quot;))
+        return f(*args, **kwargs)
+    return wrapper
+
+
+# ------------------------------------------------------------------
+# Routes - Auth
+# ------------------------------------------------------------------
+@app.route(&quot;/&quot;)
+def index():
+    if &quot;user_id&quot; in session:
+        return redirect(url_for(&quot;dashboard&quot;))
+    return redirect(url_for(&quot;login&quot;))
+
+
+@app.route(&quot;/register&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def register():
+    if request.method == &quot;POST&quot;:
+        name = request.form.get(&quot;name&quot;, &quot;&quot;).strip()
+        email = request.form.get(&quot;email&quot;, &quot;&quot;).strip().lower()
+        password = request.form.get(&quot;password&quot;, &quot;&quot;)
+
+        if not name or not email or not password:
+            flash(&quot;All fields are required.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;register&quot;))
+
+        db = get_db()
+        existing = db.execute(&quot;SELECT id FROM users WHERE email = ?&quot;, (email,)).fetchone()
+        if existing:
+            flash(&quot;An account with this email already exists.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;register&quot;))
+
+        db.execute(
+            &quot;INSERT INTO users (name, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)&quot;,
+            (name, email, generate_password_hash(password), &quot;customer&quot;, datetime.now().isoformat()),
+        )
+        db.commit()
+        flash(&quot;Account created successfully. Please log in.&quot;, &quot;success&quot;)
+        return redirect(url_for(&quot;login&quot;))
+
+    return render_template(&quot;register.html&quot;)
+
+
+@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    if request.method == &quot;POST&quot;:
+        email = request.form.get(&quot;email&quot;, &quot;&quot;).strip().lower()
+        password = request.form.get(&quot;password&quot;, &quot;&quot;)
+
+        db = get_db()
+        user = db.execute(&quot;SELECT * FROM users WHERE email = ?&quot;, (email,)).fetchone()
+
+        if user and check_password_hash(user[&quot;password_hash&quot;], password):
+            session[&quot;user_id&quot;] = user[&quot;id&quot;]
+            session[&quot;name&quot;] = user[&quot;name&quot;]
+            session[&quot;role&quot;] = user[&quot;role&quot;]
+            flash(f&quot;Welcome back, {user[&#x27;name&#x27;]}!&quot;, &quot;success&quot;)
+            return redirect(url_for(&quot;dashboard&quot;))
+
+        flash(&quot;Invalid email or password.&quot;, &quot;danger&quot;)
+        return redirect(url_for(&quot;login&quot;))
+
+    return render_template(&quot;login.html&quot;)
+
+
+@app.route(&quot;/logout&quot;)
+def logout():
+    session.clear()
+    flash(&quot;You have been logged out.&quot;, &quot;info&quot;)
+    return redirect(url_for(&quot;login&quot;))
+
+
+# ------------------------------------------------------------------
+# Routes - Customer
+# ------------------------------------------------------------------
+@app.route(&quot;/dashboard&quot;)
+@login_required
+def dashboard():
+    if session.get(&quot;role&quot;) == &quot;admin&quot;:
+        return redirect(url_for(&quot;admin_dashboard&quot;))
+
+    db = get_db()
+    complaints = db.execute(
+        &quot;SELECT * FROM complaints WHERE user_id = ? ORDER BY created_at DESC&quot;,
+        (session[&quot;user_id&quot;],),
+    ).fetchall()
+
+    stats = {
+        &quot;total&quot;: len(complaints),
+        &quot;open&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Open&quot;]),
+        &quot;in_progress&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;In Progress&quot;]),
+        &quot;resolved&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Resolved&quot;]),
+    }
+
+    return render_template(&quot;dashboard.html&quot;, complaints=complaints, stats=stats)
+
+
+@app.route(&quot;/submit-complaint&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+@login_required
+def submit_complaint():
+    if request.method == &quot;POST&quot;:
+        text = request.form.get(&quot;complaint_text&quot;, &quot;&quot;).strip()
+        if not text:
+            flash(&quot;Please describe your complaint.&quot;, &quot;danger&quot;)
+            return redirect(url_for(&quot;submit_complaint&quot;))
+
+        prediction = predict_complaint(text)
+
+        db = get_db()
+        db.execute(
+            &quot;&quot;&quot;INSERT INTO complaints
+               (user_id, complaint_text, category, priority, department, status, created_at)
+               VALUES (?, ?, ?, ?, ?, &#x27;Open&#x27;, ?)&quot;&quot;&quot;,
+            (session[&quot;user_id&quot;], text, prediction[&quot;category&quot;], prediction[&quot;priority&quot;],
+             prediction[&quot;department&quot;], datetime.now().isoformat()),
+        )
+        db.commit()
+
+        flash(
+            f&quot;Complaint submitted! AI classified it as &#x27;{prediction[&#x27;category&#x27;]}&#x27; &quot;
+            f&quot;({prediction[&#x27;priority&#x27;]} priority) -&gt; routed to {prediction[&#x27;department&#x27;]}.&quot;,
+            &quot;success&quot;,
+        )
+        return redirect(url_for(&quot;dashboard&quot;))
+
+    return render_template(&quot;submit_complaint.html&quot;)
+
+
+# ------------------------------------------------------------------
+# Routes - Admin
+# ------------------------------------------------------------------
+@app.route(&quot;/admin&quot;)
+@login_required
+@admin_required
+def admin_dashboard():
+    db = get_db()
+    complaints = db.execute(
+        &quot;&quot;&quot;SELECT complaints.*, users.name as user_name, users.email as user_email
+           FROM complaints JOIN users ON complaints.user_id = users.id
+           ORDER BY complaints.created_at DESC&quot;&quot;&quot;
+    ).fetchall()
+
+    stats = {
+        &quot;total&quot;: len(complaints),
+        &quot;open&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Open&quot;]),
+        &quot;in_progress&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;In Progress&quot;]),
+        &quot;resolved&quot;: len([c for c in complaints if c[&quot;status&quot;] == &quot;Resolved&quot;]),
+        &quot;high_priority&quot;: len([c for c in complaints if c[&quot;priority&quot;] == &quot;High&quot;]),
+    }
+
+    category_counts = {}
+    department_counts = {}
+    for c in complaints:
+        category_counts[c[&quot;category&quot;]] = category_counts.get(c[&quot;category&quot;], 0) + 1
+        department_counts[c[&quot;department&quot;]] = department_counts.get(c[&quot;department&quot;], 0) + 1
+
+    return render_template(
+        &quot;admin_dashboard.html&quot;,
+        complaints=complaints,
+        stats=stats,
+        category_counts=category_counts,
+        department_counts=department_counts,
+    )
+
+
+@app.route(&quot;/admin/complaint/&lt;int:complaint_id&gt;/status&quot;, methods=[&quot;POST&quot;])
+@login_required
+@admin_required
+def update_status(complaint_id):
+    new_status = request.form.get(&quot;status&quot;)
+    if new_status not in (&quot;Open&quot;, &quot;In Progress&quot;, &quot;Resolved&quot;):
+        flash(&quot;Invalid status.&quot;, &quot;danger&quot;)
+        return redirect(url_for(&quot;admin_dashboard&quot;))
+
+    db = get_db()
+    db.execute(&quot;UPDATE complaints SET status = ? WHERE id = ?&quot;, (new_status, complaint_id))
+    db.commit()
+    flash(&quot;Complaint status updated.&quot;, &quot;success&quot;)
+    return redirect(url_for(&quot;admin_dashboard&quot;))
+
+
+# ------------------------------------------------------------------
+if __name__ == &quot;__main__&quot;:
+    if not os.path.exists(DB_PATH):
+        init_db()
+    else:
+        init_db()  # safe to call - uses IF NOT EXISTS
+    app.run(debug=True)</code></pre>
+    </div>
+
+  </section>
+
+
   <section id="setup">
-    <div class="eyebrow">Section 09</div>
-    <h2>Setup Guide</h2>
+    <div class="eyebrow">Reference</div>
+    <h2>Local Setup Guide</h2>
 
     <div class="steps">
       <div class="step">
         <h4>Install Python 3.11 or 3.12</h4>
         <p>Avoid brand-new Python releases (3.13/3.14) — some ML packages don't yet ship pre-built wheels for them,
-          which forces slow source builds that often fail on Windows without Visual Studio Build Tools.</p>
+          forcing slow source builds that often fail on Windows without Visual Studio Build Tools.</p>
       </div>
       <div class="step">
         <h4>Create and activate a virtual environment</h4>
@@ -1230,29 +2498,11 @@ python machine_learning/train_models.py</code></pre>
       </div>
     </div>
   </section>
-
-  <!-- ================= TESTING ================= -->
-  <section id="testing">
-    <div class="eyebrow">Section 10</div>
-    <h2>Testing Checklist</h2>
-    <p>Run through this before every demo or submission.</p>
-
-    <table>
-      <tr><th>Flow</th><th>Expected result</th></tr>
-      <tr><td>Register new account</td><td>Redirects to login with a success message</td></tr>
-      <tr><td>Login with wrong password</td><td>Shows "Invalid email or password", stays on login</td></tr>
-      <tr><td>Submit a network-related complaint</td><td>Auto-classified as <span class="tag tag-amber">Network</span> → routed to <span class="tag">IT</span></td></tr>
-      <tr><td>Login as admin</td><td>Redirects to <code>/admin</code>, not the customer dashboard</td></tr>
-      <tr><td>Update complaint status</td><td>Status tag changes immediately on refresh</td></tr>
-      <tr><td>Resize to mobile width</td><td>Sidebar/nav collapses, tables remain scrollable</td></tr>
-    </table>
-  </section>
-
 </div>
 </div>
 
 <footer>
-  AI Complaint Management System — Internal Build Documentation
+  © Magician Solutions Pvt. Ltd — AI Complaint Management System — Internal Build Documentation.
 </footer>
 
 <script>
@@ -1270,7 +2520,6 @@ python machine_learning/train_models.py</code></pre>
   backdrop && backdrop.addEventListener('click', closeMenu);
   sidebar.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', closeMenu));
 
-  // Scrollspy: highlight active section in sidebar
   const links = Array.from(document.querySelectorAll('.nav-link'));
   const sections = links.map(l => document.querySelector(l.getAttribute('href')));
 
@@ -1288,7 +2537,6 @@ python machine_learning/train_models.py</code></pre>
 
   sections.forEach(s => s && observer.observe(s));
 
-  // Copy-to-clipboard for code blocks
   document.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const codeEl = btn.closest('.code-block').querySelector('code');
@@ -1301,7 +2549,6 @@ python machine_learning/train_models.py</code></pre>
     });
   });
 
-  // -------- Wrap tables so they scroll horizontally on narrow screens --------
   document.querySelectorAll('table').forEach(table => {
     const wrap = document.createElement('div');
     wrap.className = 'table-scroll scroll-fade';
@@ -1310,7 +2557,6 @@ python machine_learning/train_models.py</code></pre>
   });
   document.querySelectorAll('.tree, .pipeline-wrap').forEach(el => el.classList.add('scroll-fade'));
 
-  // -------- Page load veil --------
   const veil = document.getElementById('pageVeil');
   window.addEventListener('load', () => {
     setTimeout(() => veil && veil.classList.add('done'), 200);
@@ -1319,7 +2565,6 @@ python machine_learning/train_models.py</code></pre>
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover:none), (pointer:coarse)').matches;
 
-  // -------- Custom cursor --------
   if (!reduced && !isTouch) {
     const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
@@ -1348,10 +2593,9 @@ python machine_learning/train_models.py</code></pre>
     });
   }
 
-  // -------- Scroll reveal --------
   const revealTargets = document.querySelectorAll(
     'section > .eyebrow, section > h2, section > .lead, section > p, .card, .day, .code-block, ' +
-    '.tree, .callout, table, .steps .step, .pipeline-wrap'
+    '.tree, .callout, .solution-box, table, .steps .step, .pipeline-wrap'
   );
   revealTargets.forEach((el, i) => {
     if (!el.hasAttribute('data-reveal')) el.setAttribute('data-reveal', 'rise');
@@ -1375,7 +2619,6 @@ python machine_learning/train_models.py</code></pre>
     document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
   }
 
-  // -------- 3D tilt on cards / code blocks --------
   if (!reduced && !isTouch) {
     document.querySelectorAll('.card, .member-block').forEach(el => {
       el.style.transformStyle = 'preserve-3d';
